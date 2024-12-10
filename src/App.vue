@@ -7,7 +7,7 @@
  * @LastEditTime: 2024-11-22 14:56:58
 -->
 <template>
-    <div class="EntirePage" @scroll="scrollEvent">
+    <div class="EntirePage">
         <div class="container">
             <div class="header" :class="{ sticky: flag}">
                 <img style="width: 100px"
@@ -21,9 +21,11 @@
                 :ellipsis="false"
                 @select="handleSelect">
                     <el-menu-item :class="{ sticky2 : flag}" index="1">首页</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="2">测试2</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="3">测试3</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="4">测试4</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="2">产品中心</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="3">专业案例</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="4">关于我们</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="5">企业文化</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="6">加入我们</el-menu-item>
                 </el-menu>
             </div>
             <div class="main">
@@ -71,6 +73,8 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus';
+import { onMounted } from 'vue';
+import { onUnmounted } from 'vue';
 
 const activeIndex = ref('1')
 const flag = ref(false)
@@ -104,16 +108,33 @@ const handleSelect = (key: string, keyPath: string[]) => {
       // 当选中第四个菜单项时，调用 openError 函数显示错误信息
       openError()
       break
+    case '5':
+      // 当选中第三个菜单项时，调用 openError 函数显示错误信息
+      openError()
+      break
+    case '6':
+      // 当选中第四个菜单项时，调用 openError 函数显示错误信息
+      openError()
+      break
   }
 }
 
 
-const scrollEvent = (e: Event) => {
-  const dis = (e.target as HTMLElement).scrollTop; // 明确声明 e.target 的类型
-
+const scrollEvent = () => {
+  const dis = document.documentElement.scrollTop || document.body.scrollTop
+//   const dis = (e.target instanceof HTMLElement) ? e.target.scrollTop : 10; // 明确声明 e.target 的类型
+//   console.log('scrollTop:', dis);
   // 使用 flag 的方式要通过 ref
   flag.value = dis > 150;
 }
+
+onMounted(() => {
+    window.addEventListener('scroll', scrollEvent)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', scrollEvent)
+})
 
 /**
  * 显示错误信息的函数
@@ -142,11 +163,15 @@ const openError = () => {
   min-width: 100%;
   min-height: 100vh;
 }
+body{
+    min-width: 800px;
+    /* height: 2000px; */
+}
 html{
-    overflow: hidden;
+    overflow: scroll;
 }
 .EntirePage{
-    height: 100vh;
+    /* height: 100vh; */
     overflow: auto;
 }
 .container{
@@ -193,11 +218,26 @@ html{
     height: 400px;
 }
 .el-menu > .el-menu-item{
-    font-size: 14pt;
+    font-size: 12pt;
     font-family: HONOR Sans;
     color: white !important;
     background-color: transparent !important;
     width: 100px;
+    border-bottom: none !important;
+}
+.el-menu > .el-menu-item.is-active{
+    border-bottom: none !important;
+}
+.el-menu > .el-menu-item.is-active::after{
+    content: '';
+    position: absolute;
+    left: auto;
+    /* top: 10px; */
+    bottom: 15px;
+    right: auto;
+    height: 2px;
+    width: 30px;
+    background-color: #459cf6;
 }
 .el-menu > .el-menu-item.sticky2{
     color: black !important;

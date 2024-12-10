@@ -7,84 +7,59 @@
  * @LastEditTime: 2024-11-22 11:30:48
 -->
 <template>
-  <el-carousel :interval="9000" indicator-position="inside" height="800px" :pause-on-hover="false">
+  <el-carousel :interval="9000" indicator-position="inside" height="600px" :pause-on-hover="false">
     <el-carousel-item v-for="(image, item) in images" :key="item">
-      <img :src="image" alt="Carousel Image" style="width: 100%; height: 100%; object-fit: cover;">
+      <img :src="image" alt="Carousel Image" style="width: 100%; height: 100%; object-fit: cover; filter:brightness(0.8)">
     </el-carousel-item>
   </el-carousel>
+  <div class="aboutus-divider"></div>
   <div class="info_main">
     <div class="elrow">
       <div class="col1">
-        <div class="col_img"><img src="../img/bg1.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div class="col_img"><a href="#" @click="openError"><img src="../img/page1-introduce.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
         <div class="col_text">
-          <h2 style="color: black; font-family: HONOR Sans;">这里是标题标题标题标题</h2>
-          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文</span>
+          <h2 style="color: black; font-family: HONOR Sans;">公司介绍</h2>
+          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
         </div>
       </div>
       <div class="col2">
-        <div class="col_img"><img src="../img/bg2.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div class="col_img"><a href="#" @click="openError"><img src="../img/page1-license.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
         <div class="col_text">
-          <h2 style="color: black; font-family: HONOR Sans;">这里是标题标题标题标题</h2>
-          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文</span>
+          <h2 style="color: black; font-family: HONOR Sans;">企业资质</h2>
+          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
         </div>
       </div>
-    </div>
-    <div class="elrow">
-      <div class="col3">
-        <div class="col_img"><img src="../img/bg3.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="col1">
+        <div class="col_img"><a href="#" @click="openError"><img src="../img/page1-weget.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
         <div class="col_text">
-          <h2 style="color: black; font-family: HONOR Sans;">这里是标题标题标题标题</h2>
-          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文</span>
-        </div>
-      </div>
-      <div class="col4">
-        <div class="col_img"><img src="../img/bg4.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;"></div>
-        <div class="col_text">
-          <h2 style="color: black; font-family: HONOR Sans;">这里是标题标题标题标题</h2>
-          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文</span>
-        </div>
-      </div>
-      <div class="col4">
-        <div class="col_img"><img src="../img/bg5.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;"></div>
-        <div class="col_text">
-          <h2 style="color: black; font-family: HONOR Sans;">这里是标题标题标题标题</h2>
-          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文</span>
-        </div>
-      </div>
-    </div>
-    <div class="elrow">
-      <div class="col2-1">
-        <div class="col_img"><img src="../img/bg1.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;"></div>
-        <div class="col_text">
-          <h2 style="color: black; font-family: HONOR Sans;">这里是标题标题标题标题</h2>
-          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文</span>
-        </div>
-      </div>
-      <div class="col1-1">
-        <div class="col_img"><img src="../img/bg2.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;"></div>
-        <div class="col_text">
-          <h2 style="color: black; font-family: HONOR Sans;">这里是标题标题标题标题</h2>
-          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文</span>
+          <h2 style="color: black; font-family: HONOR Sans;">企业荣誉</h2>
+          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
         </div>
       </div>
     </div>
   </div>
+  <div class="info_content_2"></div>
 </template>
 
-<script lang="ts">
-export default {
-  data() {
-      return {
-        images: [
-          new URL('../img/Background1.jpg', import.meta.url).href,
-          new URL('../img/Background2.jpg', import.meta.url).href,
-          new URL('../img/Background3.jpg', import.meta.url).href,
-          new URL('../img/Background4.jpg', import.meta.url).href
-        ]
-      }
-  }
+<script lang="ts" setup>
+import { ref } from 'vue';
+import { ElMessage } from 'element-plus';
+
+// 定义响应式的数据
+const images = [
+  new URL('../img/Background1.jpg', import.meta.url).href,
+  new URL('../img/Background2.jpg', import.meta.url).href,
+  new URL('../img/Background3.jpg', import.meta.url).href,
+  new URL('../img/Background4.jpg', import.meta.url).href
+];
+
+const openError = (event: MouseEvent) => {
+  // 使用 Element Plus 的 Message 组件显示错误信息
+  event.preventDefault();
+  ElMessage.error('噢，你点击的地方还没有开发完成呢！')
 }
 </script>
+
 
 <style scoped>
 .el-carousel{
@@ -108,67 +83,52 @@ export default {
   background-color: #d3dce6;
 }
 .col1{
-  max-width: 800px;
-  height: 550px;
+  max-width: 350px;
+  height: auto;
   background-color: white !important;
   flex: 1;
-  box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8);
-}
-.col1-1{
-  max-width: 800px;
-  height: 550px;
-  background-color: white !important;
-  flex: 1;
-  margin-left: 30px;
-  box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8);
+  /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
 }
 .col2{
-  max-width: 400px;
-  height: 550px;
+  max-width: 350px;
+  height: auto;
+  background-color: white !important;
+  flex: 1;
+  /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
+  border-left: 1px solid #afafaf;
+  border-right: 1px solid #afafaf;
   margin-left: 30px;
-  background-color: white !important;
-  flex: 1;
-  box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8);
-}
-.col2-1{
-  max-width: 400px;
-  height: 550px;
-  background-color: white !important;
-  flex: 1;
-  box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8);
-}
-.col3{
-  max-width: 370px;
-  height: 550px;
-  background-color: white !important;
-  flex: 1;
-  box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8);
-}
-.col4{
-  max-width: 370px;
-  height: 550px;
-  background-color: white !important;
-  flex: 1;
-  margin-left: 50px;
-  box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8);
+  margin-right: 30px;
 }
 .info_main{
-  margin-left: 20vh;
-  margin-right: 20vh;
+  align-items: center;
+}
+.info_content_2{
+  height: 600px;
+  background-color: rgb(235, 235, 235);
 }
 .elrow{
   display: flex;
-  width: auto;
+  min-width: 80%;
   margin-top: 30px;
   justify-content: center;
 }
 .col_img{
-  height: 330px;
+  height: auto;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .col_text{
-  min-height: 160px;
+  min-height: 190px;
   width: auto;
-  padding: 30px
+  padding: 30px;
+}
+.aboutus-divider{
+  background-image: url(../img/divider/aboutus-divider.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height:150px;
 }
 </style>
