@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:37:14
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-11-22 14:56:58
+ * @LastEditTime: 2024-12-11 16:54:05
 -->
 <template>
     <div class="EntirePage">
@@ -21,11 +21,11 @@
                 :ellipsis="false"
                 @select="handleSelect">
                     <el-menu-item :class="{ sticky2 : flag}" index="1">首页</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="2">产品中心</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="3">专业案例</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="4">关于我们</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="5">企业文化</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="6">加入我们</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="2">解决方案</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="3">客户案例</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="4">生态与合作</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="5">关于我们</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="6">联系我们</el-menu-item>
                 </el-menu>
             </div>
             <div class="main">
