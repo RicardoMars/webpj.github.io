@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-11 17:00:38
+ * @LastEditTime: 2024-12-11 17:35:46
 -->
 <template>
   <el-carousel :interval="9000" indicator-position="inside" height="600px" :pause-on-hover="false">
@@ -75,12 +75,12 @@ const openError = (event: MouseEvent) => {
   margin: 0;
   text-align: center;
 }
-.el-carousel__item{
+/* .el-carousel__item{
   position: relative;
 }
 .el-carousel__item > img{
   position: absolute;
-}
+} */
 .el-carousel__item:nth-child(2n) {
   background-color: #99a9bf;
 }
