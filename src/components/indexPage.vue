@@ -50,15 +50,15 @@
           </div>
         </div>
       </a>
-      <a href="#" @click="openError">
         <div :class="{col2:true, col2diventer:showdiv2}">
-          <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
-          <div class="col_text">
-            <h2 style="color: black; font-family: HONOR Sans;">信息安全集成与运维</h2>
-            <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
-          </div>
+          <a href="#" @click="openError">
+            <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
+            <div class="col_text">
+              <h2 style="color: black; font-family: HONOR Sans;">信息安全集成与运维</h2>
+              <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
+            </div>
+          </a>
         </div>
-      </a>
       <a href="#" @click="openError">
         <div :class="{col1:true, col1diventer:showdiv3}">
           <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
@@ -69,6 +69,18 @@
         </div>
       </a>
     </div>
+    <a href="#"><div class="checkMore" style="margin-top: 10px;">查看更多>></div></a>
+  </div>
+  <div class="info_content_3">
+    <div class="service-divider"></div>
+    <div class="servicebox">
+      <div class="servicebox-content" v-for="item in items">
+        <img :src="item.imgUrl" style="width: 60px;">
+        <div>{{ item.title }}</div>
+        <div>{{ item.content }}</div>
+      </div>
+    </div>
+    <a href="#"><div class="checkMore">查看更多>></div></a>
   </div>
 </template>
 
@@ -77,6 +89,7 @@ import { ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import { onMounted } from 'vue';
 import { onUnmounted } from 'vue';
+import { reactive } from 'vue';
 
 const showdiv = ref(false);
 const showdiv2 = ref(false);
@@ -90,6 +103,39 @@ const images = [
   new URL('../img/Background4.jpg', import.meta.url).href
 ];
 
+const items = reactive([
+  {
+    imgUrl: new URL('../img/servicesicon/display.svg', import.meta.url).href,
+    title: '项目营销',
+    content: '这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文'
+  },
+  {
+    imgUrl: new URL('../img/servicesicon/communication.svg', import.meta.url).href,
+    title: '需求沟通与管理',
+    content: '这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文'
+  },
+  {
+    imgUrl: new URL('../img/servicesicon/design.svg', import.meta.url).href,
+    title: '解决方案设计',
+    content: '这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文'
+  },
+  {
+    imgUrl: new URL('../img/servicesicon/success.svg', import.meta.url).href,
+    title: '落地与实施',
+    content: '这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文'
+  },
+  {
+    imgUrl: new URL('../img/servicesicon/delivery.svg', import.meta.url).href,
+    title: '测试与交付',
+    content: '这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文'
+  },
+  {
+    imgUrl: new URL('../img/servicesicon/phonecall.svg', import.meta.url).href,
+    title: '服务回访与跟踪',
+    content: '这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文'
+  },
+])
+
 const openError = (event: MouseEvent) => {
   // 使用 Element Plus 的 Message 组件显示错误信息
   event.preventDefault();
@@ -98,12 +144,11 @@ const openError = (event: MouseEvent) => {
 
 const scrollEvent = () => {
   const dis = document.documentElement.scrollTop || document.body.scrollTop
-  console.log(dis)
   if (dis > 450) {
     showdiv.value = true;
     setTimeout(() => {
       showdiv2.value = true;
-    }, 300);
+    }, 400);
     setTimeout(() => {
       showdiv3.value = true;
     }, 600)
@@ -146,12 +191,14 @@ onUnmounted(() => {
 }
 #app > div > div.container > div.main > div.info_main > .elrow .col1{
   max-width: 350px;
+  min-width: 350px;
   height: auto;
   background-color: white !important;
   flex: 1;
   /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
 }
-#app > div > div.container > div.main > div.info_content_2 > .elrow2 .col1{
+#app > div > div.container > div.main > div.info_content_2 > div > a > div.col1{
+  min-width: 350px;
   max-width: 350px;
   height: auto;
   background-color: white !important;
@@ -162,6 +209,7 @@ onUnmounted(() => {
 }
 #app > div > div.container > div.main > div.info_main > div > div.col2{
   max-width: 350px;
+  min-width: 350px;
   height: auto;
   background-color: white !important;
   flex: 1;
@@ -171,7 +219,8 @@ onUnmounted(() => {
   margin-left: 30px;
   margin-right: 30px;
 }
-#app > div > div.container > div.main > div.info_content_2 > div > a:nth-child(2) > div{
+#app > div > div.container > div.main > div.info_content_2 > div > div.col2{
+  min-width: 350px;
   max-width: 350px;
   height: auto;
   background-color: white !important;
@@ -188,6 +237,8 @@ onUnmounted(() => {
 }
 .info_content_2{
   height: 600px;
+  justify-items: center;
+  align-items: center;
   background-color: rgb(235, 235, 235);
 }
 .info_content_2 .elrow2{
@@ -264,5 +315,49 @@ onUnmounted(() => {
   transform: translateY(0%) !important;
   opacity: 1!important;
   transition: all .5s ease;
+}
+.service-divider{
+  background-image: url(../img/divider/fullprocessservices-divider.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height:150px;
+  width: 100%;
+}
+.servicebox{
+  display: flex;
+  min-width: 1200px;
+  max-width: 1200px;
+  height: 600px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.info_content_3{
+  height: 900px;
+  justify-items: center;
+  align-items: center;
+}
+.servicebox-content{
+  background-color: rgb(210, 235, 245);
+  border: 1px solid rgba(116, 116, 116, 0.8);
+  box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8);
+  width: 300px;
+  height: 250px;
+  margin-left: 30px;
+  margin-right: 30px;
+  align-content: center;
+}
+.checkMore{
+  color: white;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+  transition: color 0.3s, background-color 0.3s;
+}
+.checkMore:hover{
+  color: black;
+  background-color: white;
 }
 </style>

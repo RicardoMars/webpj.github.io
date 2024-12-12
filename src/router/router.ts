@@ -8,7 +8,7 @@
  */
 import { createRouter,createWebHashHistory } from "vue-router"
 import homePage from "../components/indexPage.vue"
-import testPage1 from "../components/testPage.vue"
+import solutionPage from "../components/solutionsPage.vue"
 
 const routes = [
     {
@@ -17,9 +17,9 @@ const routes = [
         component:homePage
     },
     {
-        path: '/testPage',
-        name: 'testPage',
-        component:testPage1
+        path: '/solution',
+        name: 'solutionPage',
+        component: solutionPage
     }
 ]
 

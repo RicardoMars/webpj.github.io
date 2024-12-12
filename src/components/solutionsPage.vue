@@ -8,7 +8,6 @@
 -->
 <template>
   <div class="pageTwo">
-    <h2>这是第二页</h2>
   </div>
 </template>
 
@@ -21,7 +20,7 @@
   padding-top: 7vh;
   width: 100%;
   height: 300px;
-  background-color: black !important;
+  background-image: url('../img/topBackground.jpg');
   position: relative;
 }
 </style>

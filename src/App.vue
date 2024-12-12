@@ -10,7 +10,7 @@
     <div class="EntirePage">
         <div class="container">
             <div class="header" :class="{ sticky: flag}">
-                <img style="width: 100px"
+                <img style="width: 130px"
                 src="./img/element-plus-logo.svg"
                 alt="Enterprise Logo"
                 class="LogoPic"/>
@@ -98,7 +98,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
       break
     case '2':
       // 当选中第二个菜单项时，导航到名为 'testPage' 的路由
-      router.push({ name: 'testPage'})
+      router.push({ name: 'solutionPage'})
       break
     case '3':
       // 当选中第三个菜单项时，调用 openError 函数显示错误信息
