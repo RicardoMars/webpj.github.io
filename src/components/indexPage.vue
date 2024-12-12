@@ -4,13 +4,12 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-11 17:35:46
+ * @LastEditTime: 2024-12-12 17:34:28
 -->
 <template>
   <el-carousel :interval="9000" indicator-position="inside" height="600px" :pause-on-hover="false">
     <el-carousel-item v-for="(image, item) in images" :key="item">
       <img :src="image" alt="Carousel Image" style="width: 100%; height: 100%; object-fit: cover; filter:brightness(0.8)">
-      <span>测试测试测试</span>
     </el-carousel-item>
   </el-carousel>
   <div class="aboutus-divider"></div>
@@ -39,12 +38,49 @@
       </div>
     </div>
   </div>
-  <div class="info_content_2"></div>
+  <div class="solutions-divider"></div>
+  <div class="info_content_2">
+    <div class="elrow2">
+      <a href="#" @click="openError">
+        <div :class="{col1:true, col1diventer:showdiv}">
+          <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
+          <div class="col_text">
+            <h2 style="color: black; font-family: HONOR Sans;">基础设施集成以及运维服务</h2>
+            <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" @click="openError">
+        <div :class="{col2:true, col2diventer:showdiv2}">
+          <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
+          <div class="col_text">
+            <h2 style="color: black; font-family: HONOR Sans;">信息安全集成与运维</h2>
+            <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" @click="openError">
+        <div :class="{col1:true, col1diventer:showdiv3}">
+          <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
+          <div class="col_text">
+            <h2 style="color: black; font-family: HONOR Sans;">智能化系统集成及解决方案</h2>
+            <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
-// import { ref } from 'vue';
+import { ref } from 'vue';
 import { ElMessage } from 'element-plus';
+import { onMounted } from 'vue';
+import { onUnmounted } from 'vue';
+
+const showdiv = ref(false);
+const showdiv2 = ref(false);
+const showdiv3 = ref(false);
 
 // 定义响应式的数据
 const images = [
@@ -59,6 +95,32 @@ const openError = (event: MouseEvent) => {
   event.preventDefault();
   ElMessage.error('噢，你点击的地方还没有开发完成呢！')
 }
+
+const scrollEvent = () => {
+  const dis = document.documentElement.scrollTop || document.body.scrollTop
+  console.log(dis)
+  if (dis > 450) {
+    showdiv.value = true;
+    setTimeout(() => {
+      showdiv2.value = true;
+    }, 300);
+    setTimeout(() => {
+      showdiv3.value = true;
+    }, 600)
+  }
+}
+
+onMounted(() => {
+  // 监听滚动事件
+  window.addEventListener('scroll', scrollEvent);
+});
+
+onUnmounted(() => {
+  // 移除滚动事件监听
+  window.removeEventListener('scroll', scrollEvent);
+});
+
+
 </script>
 
 
@@ -75,12 +137,6 @@ const openError = (event: MouseEvent) => {
   margin: 0;
   text-align: center;
 }
-/* .el-carousel__item{
-  position: relative;
-}
-.el-carousel__item > img{
-  position: absolute;
-} */
 .el-carousel__item:nth-child(2n) {
   background-color: #99a9bf;
 }
@@ -88,14 +144,23 @@ const openError = (event: MouseEvent) => {
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
-.col1{
+#app > div > div.container > div.main > div.info_main > .elrow .col1{
   max-width: 350px;
   height: auto;
   background-color: white !important;
   flex: 1;
   /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
 }
-.col2{
+#app > div > div.container > div.main > div.info_content_2 > .elrow2 .col1{
+  max-width: 350px;
+  height: auto;
+  background-color: white !important;
+  flex: 1;
+  transform: translateY(10%);
+  opacity: 0;
+  /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
+}
+#app > div > div.container > div.main > div.info_main > div > div.col2{
   max-width: 350px;
   height: auto;
   background-color: white !important;
@@ -106,12 +171,29 @@ const openError = (event: MouseEvent) => {
   margin-left: 30px;
   margin-right: 30px;
 }
+#app > div > div.container > div.main > div.info_content_2 > div > a:nth-child(2) > div{
+  max-width: 350px;
+  height: auto;
+  background-color: white !important;
+  flex: 1;
+  /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
+  margin-left: 30px;
+  margin-right: 30px;
+  transform: translateY(10%);
+  opacity: 0;
+}
 .info_main{
   align-items: center;
+  height: 500px;
 }
 .info_content_2{
   height: 600px;
   background-color: rgb(235, 235, 235);
+}
+.info_content_2 .elrow2{
+  display: flex;
+  min-width: 80%;
+  justify-content: center;
 }
 .elrow{
   display: flex;
@@ -126,8 +208,21 @@ const openError = (event: MouseEvent) => {
   justify-content: center;
   align-items: center;
 }
+.col_img2{
+  height: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col_img2 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter:brightness(0.6)
+}
 .col_text{
-  min-height: 190px;
+  min-height: 210px;
   width: auto;
   padding: 30px;
 }
@@ -136,5 +231,38 @@ const openError = (event: MouseEvent) => {
   background-repeat: no-repeat;
   background-position: center;
   height:150px;
+}
+.solutions-divider{
+  background-image: url(../img/divider/Solutions-divider.png);
+  background-color: rgb(235, 235, 235);
+  background-repeat: no-repeat;
+  background-position: center;
+  height:150px;
+}
+.test{
+  background-color: red;
+  height: 500px;
+  width: 300px;
+}
+.col1diventer{
+  max-width: 350px;
+  height: auto;
+  background-color: white !important;
+  flex: 1;
+  transform: translateY(0%) !important;
+  opacity: 1!important;
+  transition: all .5s ease;
+}
+.col2diventer{
+  max-width: 350px;
+  height: auto;
+  background-color: white !important;
+  flex: 1;
+  /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
+  margin-left: 30px;
+  margin-right: 30px;
+  transform: translateY(0%) !important;
+  opacity: 1!important;
+  transition: all .5s ease;
 }
 </style>
