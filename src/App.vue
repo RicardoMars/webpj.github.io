@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:37:14
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-11 16:54:05
+ * @LastEditTime: 2024-12-13 18:01:02
 -->
 <template>
     <div class="EntirePage">
@@ -20,8 +20,8 @@
                 mode="horizontal"
                 :ellipsis="false"
                 @select="handleSelect">
-                    <el-menu-item :class="{ sticky2 : flag}" index="1">首页</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="2">解决方案</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="">首页</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="solution">解决方案</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="3">客户案例</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="4">生态与合作</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="5">关于我们</el-menu-item>
@@ -70,15 +70,17 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus';
-import { onMounted } from 'vue';
+import { onMounted, onBeforeMount } from 'vue';
 import { onUnmounted } from 'vue';
 
-const activeIndex = ref('1')
+
 const flag = ref(false)
 const router = useRouter()
+let activeIndex = router.currentRoute.value.fullPath.split('/')[1];
+
 
 /**
  * 处理菜单选择事件的函数
@@ -92,12 +94,12 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
   // 根据选中的菜单项执行相应的操作
   switch (key) {
-    case '1':
+    case '':
       // 当选中第一个菜单项时，导航到名为 'homePage' 的路由
       router.push({ name: 'homePage' })
       break
-    case '2':
-      // 当选中第二个菜单项时，导航到名为 'testPage' 的路由
+    case 'solution':
+      // 当选中第二个菜单项时，导航到名为 'solutionPage' 的路由
       router.push({ name: 'solutionPage'})
       break
     case '3':
@@ -128,8 +130,16 @@ const scrollEvent = () => {
   flag.value = dis > 150;
 }
 
+onBeforeMount(() => {
+    setTimeout(() => {
+    activeIndex = router.currentRoute.value.fullPath.split('/')[1];
+    console.log(activeIndex)
+  }, 0);
+})
+
 onMounted(() => {
     window.addEventListener('scroll', scrollEvent)
+
 })
 
 onUnmounted(() => {

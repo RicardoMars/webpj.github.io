@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-12 17:34:28
+ * @LastEditTime: 2024-12-13 16:23:25
 -->
 <template>
   <el-carousel :interval="9000" indicator-position="inside" height="600px" :pause-on-hover="false">
@@ -337,6 +337,7 @@ onUnmounted(() => {
   align-items: center;
 }
 .servicebox-content{
+  color: black;
   background-color: rgb(210, 235, 245);
   border: 1px solid rgba(116, 116, 116, 0.8);
   box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8);

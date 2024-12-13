@@ -7,7 +7,8 @@
  * @LastEditTime: 2024-11-21 17:21:49
 -->
 <template>
-  <div class="pageTwo">
+  <div class="Header">
+    <div></div>
   </div>
 </template>
 
@@ -16,7 +17,7 @@
 </script>
 
 <style scoped>
-.pageTwo{
+.Header{
   padding-top: 7vh;
   width: 100%;
   height: 300px;
