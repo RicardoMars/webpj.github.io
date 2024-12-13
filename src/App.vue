@@ -19,17 +19,30 @@
                 class="el-menu-cus"
                 mode="horizontal"
                 :ellipsis="false"
-                @select="handleSelect">
-                    <el-menu-item :class="{ sticky2 : flag}" index="">首页</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="solution">解决方案</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="3">客户案例</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="4">生态与合作</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="5">关于我们</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="6">联系我们</el-menu-item>
+                @select="handleSelect"
+                >
+                    <el-menu-item :class="{ sticky2 : flag}" index="/">首页</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="/solution">解决方案</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="/case">客户案例</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="/part">生态与合作</el-menu-item>
+                    <el-sub-menu class="menutitle" index="/aboutus" id="one">
+                        <template #title><span :class="{menutitle:true, sticky3:flag}">关于我们</span></template>
+                        <el-menu-item index="2-4-1"><span class="subitem">介绍</span></el-menu-item>
+                        <el-menu-item index="2-4-2"><span class="subitem">资质荣誉</span></el-menu-item>
+                        <el-menu-item index="2-4-3"><span class="subitem">社会责任</span></el-menu-item>
+                    </el-sub-menu>
+                    <el-menu-item :class="{ sticky2 : flag}" index="/aboutus">关于我们</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="/contactus">联系我们</el-menu-item>
                 </el-menu>
             </div>
             <div class="main">
-                <router-view></router-view>
+                <router-view v-slot="{ Component }">
+                    <transition name="scale" mode="out-in">
+                        <div :key="$route.fullPath">
+                            <component :is="Component" />
+                        </div>
+                    </transition>
+                </router-view>
             </div>
         </div>
         <div class="footer">
@@ -79,7 +92,7 @@ import { onUnmounted } from 'vue';
 
 const flag = ref(false)
 const router = useRouter()
-let activeIndex = router.currentRoute.value.fullPath.split('/')[1];
+let activeIndex = router.currentRoute.value.fullPath;
 
 
 /**
@@ -94,29 +107,26 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
   // 根据选中的菜单项执行相应的操作
   switch (key) {
-    case '':
+    case '/':
       // 当选中第一个菜单项时，导航到名为 'homePage' 的路由
       router.push({ name: 'homePage' })
       break
-    case 'solution':
+    case '/solution':
       // 当选中第二个菜单项时，导航到名为 'solutionPage' 的路由
       router.push({ name: 'solutionPage'})
       break
-    case '3':
-      // 当选中第三个菜单项时，调用 openError 函数显示错误信息
-      openError()
+    case '/case':
+      // 当选中第二个菜单项时，导航到名为 'casePage' 的路由
+      router.push({ name: 'casePage'})
       break
-    case '4':
-      // 当选中第四个菜单项时，调用 openError 函数显示错误信息
-      openError()
+    case '/part':
+        router.push({ name: 'partPage'})
       break
-    case '5':
-      // 当选中第三个菜单项时，调用 openError 函数显示错误信息
-      openError()
+    case '/aboutus':
+        router.push({ name: 'aboutusPage'})
       break
-    case '6':
-      // 当选中第四个菜单项时，调用 openError 函数显示错误信息
-      openError()
+    case '/contactus':
+        router.push({ name: 'contactusPage'})
       break
   }
 }
@@ -130,9 +140,10 @@ const scrollEvent = () => {
   flag.value = dis > 150;
 }
 
+
 onBeforeMount(() => {
-    setTimeout(() => {
-    activeIndex = router.currentRoute.value.fullPath.split('/')[1];
+  setTimeout(() => {
+    activeIndex = router.currentRoute.value.fullPath;
     console.log(activeIndex)
   }, 0);
 })
@@ -252,6 +263,18 @@ html{
 .el-menu > .el-menu-item.sticky2{
     color: black !important;
 }
+.menutitle{
+    font-size: 12pt;
+    font-family: HONOR Sans;
+    color: white !important;
+    background-color: transparent !important;
+    width: 100px;
+    border-bottom: none !important;
+}
+
+.sticky3{
+    color: black !important;
+}
 .el-menu-cus{
     background-color: transparent !important;
     border-bottom: 0 !important;
@@ -281,5 +304,42 @@ a:hover {
 }
 .content_place{
     margin-right: 40px;
+}
+.scale-enter-active,
+.scale-leave-active {
+  transition: opacity 0.3s ease;
+}
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+}
+#one .el-icon{
+    display: none;
+}
+.el-menu--horizontal>.el-sub-menu.is-active .el-sub-menu__title{
+    border-bottom: none !important;
+}
+.el-menu--horizontal>.el-sub-menu.is-active .el-sub-menu__title::after{
+    content: '';
+    position: absolute;
+    left: auto;
+    /* top: 10px; */
+    bottom: 15px;
+    right: 32px;
+    height: 2px;
+    width: 30px;
+    background-color: #459cf6;
+}
+#one .el-sub-menu__title:hover{
+    background-color: rgba(255,255,255,0.2) !important;
+}
+#one > .el-menu-item{
+    border-bottom: none !important;
+}
+.subitem{
+    color: black !important;
+}
+.subitem:hover{
+    background-color: rgba(255,255,255,0.2) !important;
 }
 </style>

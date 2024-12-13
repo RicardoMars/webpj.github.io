@@ -42,7 +42,7 @@
   <div class="info_content_2">
     <div class="elrow2">
       <a href="#" @click="openError">
-        <div :class="{col1:true, col1diventer:showdiv}">
+        <div :class="{info2col1:true, col1diventer:showdiv}">
           <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
           <div class="col_text">
             <h2 style="color: black; font-family: HONOR Sans;">基础设施集成以及运维服务</h2>
@@ -50,7 +50,7 @@
           </div>
         </div>
       </a>
-        <div :class="{col2:true, col2diventer:showdiv2}">
+        <div :class="{info2col2:true, col2diventer:showdiv2}">
           <a href="#" @click="openError">
             <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
             <div class="col_text">
@@ -60,7 +60,7 @@
           </a>
         </div>
       <a href="#" @click="openError">
-        <div :class="{col1:true, col1diventer:showdiv3}">
+        <div :class="{info2col1:true, col1diventer:showdiv3}">
           <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
           <div class="col_text">
             <h2 style="color: black; font-family: HONOR Sans;">智能化系统集成及解决方案</h2>
@@ -189,7 +189,7 @@ onUnmounted(() => {
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
-#app > div > div.container > div.main > div.info_main > .elrow .col1{
+.col1{
   max-width: 350px;
   min-width: 350px;
   height: auto;
@@ -197,7 +197,7 @@ onUnmounted(() => {
   flex: 1;
   /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
 }
-#app > div > div.container > div.main > div.info_content_2 > div > a > div.col1{
+.info2col1{
   min-width: 350px;
   max-width: 350px;
   height: auto;
@@ -207,7 +207,7 @@ onUnmounted(() => {
   opacity: 0;
   /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
 }
-#app > div > div.container > div.main > div.info_main > div > div.col2{
+.col2{
   max-width: 350px;
   min-width: 350px;
   height: auto;
@@ -219,7 +219,7 @@ onUnmounted(() => {
   margin-left: 30px;
   margin-right: 30px;
 }
-#app > div > div.container > div.main > div.info_content_2 > div > div.col2{
+.info2col2{
   min-width: 350px;
   max-width: 350px;
   height: auto;

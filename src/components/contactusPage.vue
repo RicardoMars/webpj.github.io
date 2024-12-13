@@ -9,8 +9,8 @@
 <template>
   <div class="Header">
     <div class="content">
-      <p>Solutions</p>
-      <p style="font-size: 30px;">解决方案</p>
+      <p>About Us</p>
+      <p style="font-size: 30px;">关于我们</p>
     </div>
   </div>
 </template>

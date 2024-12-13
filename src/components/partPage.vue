@@ -9,8 +9,8 @@
 <template>
   <div class="Header">
     <div class="content">
-      <p>Solutions</p>
-      <p style="font-size: 30px;">解决方案</p>
+      <p>Ecosystem Partners</p>
+      <p style="font-size: 30px;">生态合作伙伴</p>
     </div>
   </div>
 </template>
