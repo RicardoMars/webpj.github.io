@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-11-21 17:21:49
+ * @LastEditTime: 2024-12-14 19:27:08
 -->
 <template>
   <div class="Header">
@@ -70,11 +70,13 @@ const items = [
   padding-top: 30px;
 }
 .intoContent{
-  margin-bottom: 30px;
+  font-family: HONOR Sans;
+  color: black;
+  margin-top: 30px;
   background-color: white;
   border: 1px solid rgba(209, 209, 209, 0.8);
   box-shadow: 15px 15px 15px -6px rgba(116, 116, 116, 0.5);
-  font-size: 25px;
+  font-size: 25pt;
   width: 80%;
   min-height: 600px;
 }

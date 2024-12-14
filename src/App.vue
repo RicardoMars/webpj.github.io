@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:37:14
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-13 18:01:02
+ * @LastEditTime: 2024-12-14 19:24:49
 -->
 <template>
     <div class="EntirePage">
@@ -124,6 +124,9 @@ const handleSelect = (key: string, keyPath: string[]) => {
     case '/aboutus':
         router.push({ name: 'aboutusPage'})
         activeIndex.value = '/aboutus'
+        setTimeout(() => {
+            location.reload()
+        },1)
         break
     case '/contactus':
         router.push({ name: 'contactusPage'})
@@ -131,10 +134,16 @@ const handleSelect = (key: string, keyPath: string[]) => {
     case '/qualify':
         router.push({ name: 'qualifyPage'})
         activeIndex.value = '/aboutus'
+        setTimeout(() => {
+            location.reload()
+        },1)
         break
     case '/response':
         router.push({ name: 'responsePage'})
         activeIndex.value = '/aboutus'
+        setTimeout(() => {
+            location.reload()
+        },1)
         break
   }
 }
@@ -182,7 +191,11 @@ const openError = () => {
   ElMessage.error('噢，你点击的地方还没有开发完成呢！')
 }
 
-const clickEven = (val) => {
+interface ValType {
+  key: string;
+}
+
+const clickEven = (val: ValType) => {
     result.value=val.key
     activeIndex.value = result.value
 }

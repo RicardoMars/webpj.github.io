@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-11-21 17:21:49
+ * @LastEditTime: 2024-12-14 19:30:57
 -->
 <template>
   <div class="Header">
@@ -131,13 +131,14 @@ console.log(items2);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(173, 197, 218);
   width: 170px;
   height: 70px;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 .contentTitle{
+  color: black;
   width: 100%;
   font-family: HONOR Sans;
   font-size: 20pt;
