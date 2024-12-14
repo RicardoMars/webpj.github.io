@@ -19,5 +19,8 @@ const app = createApp(App)
 app.use(router)
 app.use(ElementPlus)
 
+router.afterEach(() => {
+    document.documentElement.scrollTop = 0;
+  })
 
 app.mount('#app')

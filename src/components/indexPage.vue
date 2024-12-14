@@ -16,21 +16,21 @@
   <div class="info_main">
     <div class="elrow">
       <div class="col1">
-        <div class="col_img"><a href="#" @click="openError"><img src="../img/page1-introduce.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/aboutus"><img src="../img/page1-introduce.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
         <div class="col_text">
           <h2 style="color: black; font-family: HONOR Sans;">公司介绍</h2>
           <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
         </div>
       </div>
       <div class="col2">
-        <div class="col_img"><a href="#" @click="openError"><img src="../img/page1-license.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/qualify"><img src="../img/page1-license.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
         <div class="col_text">
           <h2 style="color: black; font-family: HONOR Sans;">企业资质</h2>
           <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
         </div>
       </div>
       <div class="col1">
-        <div class="col_img"><a href="#" @click="openError"><img src="../img/page1-weget.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/response"><img src="../img/page1-weget.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
         <div class="col_text">
           <h2 style="color: black; font-family: HONOR Sans;">企业荣誉</h2>
           <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
@@ -69,7 +69,7 @@
         </div>
       </a>
     </div>
-    <a href="#"><div class="checkMore" style="margin-top: 10px;">查看更多>></div></a>
+    <a href="#/solution" @click="sonClick('/solution')"><div class="checkMore" style="margin-top: 10px;">查看更多>></div></a>
   </div>
   <div class="info_content_3">
     <div class="service-divider"></div>
@@ -94,6 +94,7 @@ import { reactive } from 'vue';
 const showdiv = ref(false);
 const showdiv2 = ref(false);
 const showdiv3 = ref(false);
+
 
 // 定义响应式的数据
 const images = [
@@ -165,6 +166,14 @@ onUnmounted(() => {
   window.removeEventListener('scroll', scrollEvent);
 });
 
+const emit = defineEmits(['son-click'])
+const sonClick = (key:string) => {
+  console.log(key)
+  let params = {
+    key: key
+  }
+  emit('son-click', params)
+}
 
 </script>
 
@@ -205,7 +214,7 @@ onUnmounted(() => {
   flex: 1;
   transform: translateY(10%);
   opacity: 0;
-  /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
+  box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8);
 }
 .col2{
   max-width: 350px;
@@ -225,7 +234,7 @@ onUnmounted(() => {
   height: auto;
   background-color: white !important;
   flex: 1;
-  /* box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8); */
+  box-shadow: 10px 10px 5px -4px rgba(116, 116, 116, 0.8);
   margin-left: 30px;
   margin-right: 30px;
   transform: translateY(10%);

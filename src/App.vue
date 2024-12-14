@@ -25,18 +25,19 @@
                     <el-menu-item :class="{ sticky2 : flag}" index="/solution">解决方案</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="/case">客户案例</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="/part">生态与合作</el-menu-item>
-                    <el-sub-menu class="menutitle" index="/aboutus" id="one">
-                        <template #title><span :class="{menutitle:true, sticky3:flag}">关于我们</span></template>
-                        <el-menu-item index="2-4-1"><span class="subitem">介绍</span></el-menu-item>
-                        <el-menu-item index="2-4-2"><span class="subitem">资质荣誉</span></el-menu-item>
-                        <el-menu-item index="2-4-3"><span class="subitem">社会责任</span></el-menu-item>
-                    </el-sub-menu>
-                    <el-menu-item :class="{ sticky2 : flag}" index="/aboutus">关于我们</el-menu-item>
+                    <el-menu-item :class="{ dropdown:true, sticky2 : flag}" index="/aboutus" disabled>
+                        <span :class="{ dropbtn:true, sticky2 : flag}">关于我们</span>
+                        <div class="dropdown-content">
+                            <a href="#" @click.prevent="handleSelect('/aboutus',['/aboutus'])">介绍</a>
+                            <a href="#" @click.prevent="handleSelect('/qualify',['/qualify'])">资质荣誉</a>
+                            <a href="#" @click.prevent="handleSelect('/response',['/response'])">社会责任</a>
+                        </div>
+                    </el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="/contactus">联系我们</el-menu-item>
                 </el-menu>
             </div>
             <div class="main">
-                <router-view v-slot="{ Component }">
+                <router-view v-slot="{ Component }" @son-click="clickEven">
                     <transition name="scale" mode="out-in">
                         <div :key="$route.fullPath">
                             <component :is="Component" />
@@ -88,12 +89,11 @@ import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus';
 import { onMounted, onBeforeMount } from 'vue';
 import { onUnmounted } from 'vue';
-
+const result = ref('')
 
 const flag = ref(false)
 const router = useRouter()
-let activeIndex = router.currentRoute.value.fullPath;
-
+const activeIndex = ref('');
 
 /**
  * 处理菜单选择事件的函数
@@ -104,7 +104,6 @@ let activeIndex = router.currentRoute.value.fullPath;
  */
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
-
   // 根据选中的菜单项执行相应的操作
   switch (key) {
     case '/':
@@ -121,13 +120,22 @@ const handleSelect = (key: string, keyPath: string[]) => {
       break
     case '/part':
         router.push({ name: 'partPage'})
-      break
+        break
     case '/aboutus':
         router.push({ name: 'aboutusPage'})
-      break
+        activeIndex.value = '/aboutus'
+        break
     case '/contactus':
         router.push({ name: 'contactusPage'})
-      break
+        break
+    case '/qualify':
+        router.push({ name: 'qualifyPage'})
+        activeIndex.value = '/aboutus'
+        break
+    case '/response':
+        router.push({ name: 'responsePage'})
+        activeIndex.value = '/aboutus'
+        break
   }
 }
 
@@ -140,10 +148,17 @@ const scrollEvent = () => {
   flag.value = dis > 150;
 }
 
-
 onBeforeMount(() => {
   setTimeout(() => {
-    activeIndex = router.currentRoute.value.fullPath;
+    activeIndex.value = router.currentRoute.value.fullPath;
+    switch(activeIndex.value){
+        case '/qualify':
+            activeIndex.value = '/aboutus'
+            break
+        case '/response':
+            activeIndex.value = '/aboutus'
+            break
+    }
     console.log(activeIndex)
   }, 0);
 })
@@ -165,6 +180,11 @@ onUnmounted(() => {
 const openError = () => {
   // 使用 Element Plus 的 Message 组件显示错误信息
   ElMessage.error('噢，你点击的地方还没有开发完成呢！')
+}
+
+const clickEven = (val) => {
+    result.value=val.key
+    activeIndex.value = result.value
 }
 
 
@@ -199,7 +219,7 @@ html{
     background-color: white;
     position: relative;
     width: 100%;
-    min-height: 2700px;
+    min-height: auto;
     /* background-image: url(./img/Background1.jpg); */
     background-position: center center;
     background-repeat: no-repeat;
@@ -313,33 +333,52 @@ a:hover {
 .scale-leave-to {
   opacity: 0;
 }
-#one .el-icon{
-    display: none;
+.dropdown{
+    position: relative;
+    display: inline-block;
 }
-.el-menu--horizontal>.el-sub-menu.is-active .el-sub-menu__title{
-    border-bottom: none !important;
+#app > div > div.container > div.header > ul > li.el-menu-item.is-disabled.dropdown{
+    opacity: 1;
 }
-.el-menu--horizontal>.el-sub-menu.is-active .el-sub-menu__title::after{
-    content: '';
+.dropdown-content {
+    color: black;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    left: auto;
-    /* top: 10px; */
-    bottom: 15px;
-    right: 32px;
-    height: 2px;
-    width: 30px;
-    background-color: #459cf6;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top:70px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
 }
-#one .el-sub-menu__title:hover{
-    background-color: rgba(255,255,255,0.2) !important;
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s 0s;
 }
-#one > .el-menu-item{
-    border-bottom: none !important;
+.dropbtn {
+    font-family: HONOR Sans;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
-.subitem{
-    color: black !important;
+.dropbtn.sticky2{
+    font-family: HONOR Sans;
+    color: black;
 }
-.subitem:hover{
-    background-color: rgba(255,255,255,0.2) !important;
+.dropdown-content a {
+    height: 50px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+.dropdown-content a:hover {
+    background-color: #bebebe
 }
 </style>
