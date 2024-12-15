@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-14 19:30:57
+ * @LastEditTime: 2024-12-15 10:55:27
 -->
 <template>
   <div class="Header">
@@ -17,7 +17,7 @@
     <div class="bigContent">
       <div class="contentTitle">合作伙伴</div>
       <div class="partPage" v-for="item in items2">
-        <img :src="item.logo" style="width: 150px;">
+        <img :src="item.logo" style="width: 110px;">
       </div>
     </div>
     <el-divider></el-divider>
@@ -131,7 +131,7 @@ console.log(items2);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(173, 197, 218);
+  background-color: rgb(255, 255, 255);
   width: 170px;
   height: 70px;
   margin-right: 20px;

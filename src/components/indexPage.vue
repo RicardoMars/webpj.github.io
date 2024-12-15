@@ -80,7 +80,7 @@
         <div>{{ item.content }}</div>
       </div>
     </div>
-    <a href="#"><div class="checkMore">查看更多>></div></a>
+    <a href="#/case" @click="sonClick('/case')"><div class="checkMore">查看更多>></div></a>
   </div>
 </template>
 
@@ -173,6 +173,9 @@ const sonClick = (key:string) => {
     key: key
   }
   emit('son-click', params)
+  setTimeout(() => {
+    location.reload()
+  },5)
 }
 
 </script>

@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-11-21 17:21:49
+ * @LastEditTime: 2024-12-15 12:00:54
 -->
 <template>
   <div class="Header">
@@ -91,9 +91,10 @@ onMounted(() => {
 #container {
   width: 70%;
   height: 400px;
-  border: 1px solid #020202;
+  /* border: 1px solid #020202; */
 }
 .text_content{
+  color: black;
   width: 30%;
   height: 400px;
   position: relative;
