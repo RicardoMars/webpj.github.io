@@ -11,7 +11,7 @@
         <div class="container">
             <div class="header" :class="{ sticky: flag}">
                 <img style="width: 130px"
-                src="./img/element-plus-logo.svg"
+                src="./img/logo02.png"
                 alt="Enterprise Logo"
                 class="LogoPic"/>
                 <el-menu
@@ -82,6 +82,7 @@
         </div>
     </div>
 </template>
+
 
 <script lang="ts" setup>
 import { ref } from 'vue';
