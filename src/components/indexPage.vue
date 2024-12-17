@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-13 16:23:25
+ * @LastEditTime: 2024-12-17 17:27:20
 -->
 <template>
   <el-carousel :interval="9000" indicator-position="inside" height="600px" :pause-on-hover="false">
@@ -16,24 +16,24 @@
   <div class="info_main">
     <div class="elrow">
       <div class="col1">
-        <div class="col_img"><a href="#/aboutus"><img src="../img/page1-introduce.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/aboutus" @click="pageReload"><img src="../img/page1-introduce.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
         <div class="col_text">
-          <h2 style="color: black; font-family: HONOR Sans;">公司介绍</h2>
-          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
+          <h2 style="color: black;">公司介绍</h2>
+          <span style="color: black;">[公司名称]成立于[成立年份]，是一家在[行业名称]领域中迅速崛起并备受瞩目的企业。公司总部位于[公司总部地点]，凭借其卓越的创新能力、专业的团队以及对客户需求的深刻理解，在行业内树立了良好的口碑。</span>
         </div>
       </div>
       <div class="col2">
-        <div class="col_img"><a href="#/qualify"><img src="../img/page1-license.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/qualify" @click="pageReload"><img src="../img/page1-license.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
         <div class="col_text">
-          <h2 style="color: black; font-family: HONOR Sans;">企业资质</h2>
-          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
+          <h2 style="color: black;">企业资质</h2>
+          <span style="color: black;">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
         </div>
       </div>
       <div class="col1">
-        <div class="col_img"><a href="#/response"><img src="../img/page1-weget.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/response" @click="pageReload"><img src="../img/page1-weget.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
         <div class="col_text">
-          <h2 style="color: black; font-family: HONOR Sans;">企业荣誉</h2>
-          <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
+          <h2 style="color: black;">企业荣誉</h2>
+          <span style="color: black;">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
         </div>
       </div>
     </div>
@@ -45,8 +45,8 @@
         <div :class="{info2col1:true, col1diventer:showdiv}">
           <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
           <div class="col_text">
-            <h2 style="color: black; font-family: HONOR Sans;">基础设施集成以及运维服务</h2>
-            <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
+            <h2 style="color: black;">基础设施集成以及运维服务</h2>
+            <span style="color: black;">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
           </div>
         </div>
       </a>
@@ -54,8 +54,8 @@
           <a href="#" @click="openError">
             <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
             <div class="col_text">
-              <h2 style="color: black; font-family: HONOR Sans;">信息安全集成与运维</h2>
-              <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
+              <h2 style="color: black;">信息安全集成与运维</h2>
+              <span style="color: black;">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
             </div>
           </a>
         </div>
@@ -63,8 +63,8 @@
         <div :class="{info2col1:true, col1diventer:showdiv3}">
           <div class="col_img2"><img src="../img/placeholder.jpg" alt="Image"></div>
           <div class="col_text">
-            <h2 style="color: black; font-family: HONOR Sans;">智能化系统集成及解决方案</h2>
-            <span style="color: black; font-family: HONOR Sans">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
+            <h2 style="color: black;">智能化系统集成及解决方案</h2>
+            <span style="color: black;">这里是正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</span>
           </div>
         </div>
       </a>
@@ -178,6 +178,12 @@ const sonClick = (key:string) => {
   },5)
 }
 
+const pageReload = () => {
+  setTimeout(() => {
+    window.location.reload()
+  }, 0)
+}
+
 </script>
 
 
@@ -245,7 +251,7 @@ const sonClick = (key:string) => {
 }
 .info_main{
   align-items: center;
-  height: 500px;
+  height: auto;
 }
 .info_content_2{
   height: 600px;

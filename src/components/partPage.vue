@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-15 10:55:27
+ * @LastEditTime: 2024-12-15 15:15:21
 -->
 <template>
   <div class="Header">
@@ -77,17 +77,46 @@ const images = [
     src: new URL('../img/customer/gov.svg', import.meta.url).href,
   }
 ]
-const items2 = [] as any[]
 
-const files = import.meta.glob('../img/partners/*')
-for (const path in files) {
-  console.log(path);
-  items2.push({
-    logo: new URL(path, import.meta.url).href
-  })
-}
-console.log(items2);
+let items2 = [] as any[]
 
+// const files = import.meta.glob('../img/partners/logo*')
+// for (const path in files) {
+//   items2.push({
+//     logo: new URL(path, import.meta.url).href
+//   })
+// }
+// console.log(items2);
+
+items2 = [
+  {
+    logo: new URL('../img/partners/logo1.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo2.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo3.svg', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo4.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo5.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo6.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo7.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo8.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo9.png', import.meta.url).href
+  }
+]
 
 
 </script>
@@ -102,7 +131,6 @@ console.log(items2);
 }
 .content{
   text-align: right;
-  font-family: HONOR Sans;
   position: absolute;
   color: wheat;
   right: 300px;
@@ -140,7 +168,6 @@ console.log(items2);
 .contentTitle{
   color: black;
   width: 100%;
-  font-family: HONOR Sans;
   font-size: 20pt;
   margin-bottom: 10px;
 }
@@ -166,7 +193,6 @@ console.log(items2);
   border-bottom-left-radius: 20%;
 }
 .left_logo p{
-  font-family: HONOR Sans;
   font-size: 15pt;
   color: white;
   line-height: 0;

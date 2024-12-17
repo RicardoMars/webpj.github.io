@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-14 19:27:08
+ * @LastEditTime: 2024-12-17 17:21:47
 -->
 <template>
   <div class="Header">
@@ -13,6 +13,11 @@
       <p style="font-size: 30px;">解决方案</p>
     </div>
   </div>
+  <div class="divider">
+    <div class="left_place">解决方案</div>
+    <div class="right_place"><a href="#/" @click="pageReload">首页</a>>解决方案</div>
+  </div>
+  <el-divider width="100px" id="header_divider"></el-divider>
   <div class="bigContent">
     <div class="intoContent" v-for="item in items">
       <p>{{ item.title }}</p>
@@ -42,6 +47,12 @@ const items = [
   }
 ]
 
+const pageReload = () => {
+  setTimeout(() => {
+    window.location.reload()
+  }, 0)
+}
+
 </script>
 
 <style scoped>
@@ -54,7 +65,6 @@ const items = [
 }
 .content{
   text-align: right;
-  font-family: HONOR Sans;
   position: absolute;
   color: wheat;
   right: 300px;
@@ -70,7 +80,6 @@ const items = [
   padding-top: 30px;
 }
 .intoContent{
-  font-family: HONOR Sans;
   color: black;
   margin-top: 30px;
   background-color: white;
@@ -79,5 +88,27 @@ const items = [
   font-size: 25pt;
   width: 80%;
   min-height: 600px;
+}
+.divider{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  /* background-color: red; */
+  justify-content: space-between;
+  align-items: center
+}
+.divider .left_place{
+  color: black;
+  font-size: 20pt;
+  margin-left: 150px;
+  
+}
+.divider .right_place{
+  color: black;
+  font-size: 13pt;
+  margin-right: 150px;
+}
+#header_divider{
+  margin: 0;
 }
 </style>

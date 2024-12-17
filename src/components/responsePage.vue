@@ -29,7 +29,6 @@
 }
 .content{
   text-align: right;
-  font-family: HONOR Sans;
   position: absolute;
   color: wheat;
   right: 300px;

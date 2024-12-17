@@ -4,14 +4,14 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:37:14
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-14 19:24:49
+ * @LastEditTime: 2024-12-15 16:02:20
 -->
 <template>
     <div class="EntirePage">
         <div class="container">
             <div class="header" :class="{ sticky: flag}">
-                <img style="width: 130px"
-                src="./img/logo02.png"
+                <img style="width: 250px"
+                src="./img/logo2.png"
                 alt="Enterprise Logo"
                 class="LogoPic"/>
                 <el-menu
@@ -48,14 +48,14 @@
         </div>
         <div class="footer">
             <div class="footer_info">
-                <div class="footer_header" style="color: black; font-family: HONOR Sans; font-size: 20pt; display: flex;">
+                <div class="footer_header" style="color: black; font-size: 20pt; display: flex;">
                     <span style="float: left;">关注我们</span>
                     <img class="footer_img wechat" src="./img/icon/微信_wechat.svg" />
                     <img class="footer_img" src="./img/icon/微博_weibo.svg" />
                     <img class="footer_img" src="./img/icon/抖音_tiktok.svg" />
                 </div>
                 <el-divider style="float: left;" />
-                <div class="footer_content" style=" color: black; font-family: HONOR Sans; float: left; display: flex;">
+                <div class="footer_content" style=" color: black; float: left; display: flex;">
                     <div class="content_place">
                         <div><span style="font-size: 15pt;">加入我们</span></div>
                         <div style="margin-top: 10px;"><a href="#" @click="openError">社会招聘</a></div>
@@ -74,9 +74,9 @@
                     </div>
                 </div>
                 <el-divider style="float: left;" />
-                <div style="width: 100%; height: 50px; color: black; float: left; font-family: HONOR Sans; text-align: center;">
-                    <div><span>Copyright © XXXX - 2024 All Rights Reserved. XX公司 版权所有</span></div>
-                    <div><a href="#">粤公网安备XXXXXXXXXXXXXX号</a></div>
+                <div style="width: 100%; height: 50px; color: black; float: left; text-align: center;">
+                    <div><span>Copyright © 2024 - 2024 All Rights Reserved. 广州铭城计算机科技有限公司 版权所有</span></div>
+                    <div><a href="#">粤ICP备10044164号-1</a></div>
                 </div>
             </div>
         </div>
@@ -274,7 +274,6 @@ html{
 }
 .el-menu > .el-menu-item{
     font-size: 12pt;
-    font-family: HONOR Sans;
     color: white !important;
     background-color: transparent !important;
     width: 100px;
@@ -299,7 +298,6 @@ html{
 }
 .menutitle{
     font-size: 12pt;
-    font-family: HONOR Sans;
     color: white !important;
     background-color: transparent !important;
     width: 100px;
@@ -374,7 +372,6 @@ a:hover {
     transition: opacity 0.3s ease, visibility 0s 0s;
 }
 .dropbtn {
-    font-family: HONOR Sans;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -382,7 +379,6 @@ a:hover {
     cursor: pointer;
 }
 .dropbtn.sticky2{
-    font-family: HONOR Sans;
     color: black;
 }
 .dropdown-content a {
