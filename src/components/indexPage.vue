@@ -19,7 +19,7 @@
         <div class="col_img"><a href="#/aboutus" @click="pageReload"><img src="../img/page1-introduce.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
         <div class="col_text">
           <h2 style="color: black;">公司介绍</h2>
-          <span style="color: black;">[公司名称]成立于[成立年份]，是一家在[行业名称]领域中迅速崛起并备受瞩目的企业。公司总部位于[公司总部地点]，凭借其卓越的创新能力、专业的团队以及对客户需求的深刻理解，在行业内树立了良好的口碑。</span>
+          <span style="color: black;">"广州铭城计算机科技有限公司"成立于[成立年份]，是一家在[行业名称]领域中迅速崛起并备受瞩目的企业。公司总部位于[公司总部地点]，凭借其卓越的创新能力、专业的团队以及对客户需求的深刻理解，在行业内树立了良好的口碑。</span>
         </div>
       </div>
       <div class="col2">

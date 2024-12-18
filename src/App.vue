@@ -219,7 +219,8 @@ const clickEven = (val: ValType) => {
   min-height: 100vh;
 }
 body{
-    min-width: 800px;
+    width: 100%;
+    min-width: 1500px;
     /* height: 2000px; */
 }
 html{

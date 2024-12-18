@@ -13,6 +13,11 @@
       <p style="font-size: 30px;">联系我们</p>
     </div>
   </div>
+  <div class="divider">
+    <div class="left_place">联系我们</div>
+    <div class="right_place"><a href="#/" @click="pageReload">首页</a>>联系我们</div>
+  </div>
+  <el-divider width="100px" id="header_divider"></el-divider>
   <div class="bigContent">
     <div class="text_content">
       <p>公司电话:XXXXXXXXXXX</p>
@@ -62,6 +67,12 @@ onMounted(() => {
 
 });
 
+const pageReload = () => {
+  setTimeout(() => {
+    window.location.reload()
+  }, 0)
+}
+
 </script>
 
 <style scoped>
@@ -98,5 +109,27 @@ onMounted(() => {
   height: 400px;
   position: relative;
   align-content: center;
+}
+.divider{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  /* background-color: red; */
+  justify-content: space-between;
+  align-items: center
+}
+.divider .left_place{
+  color: black;
+  font-size: 20pt;
+  margin-left: 150px;
+  
+}
+.divider .right_place{
+  color: black;
+  font-size: 13pt;
+  margin-right: 150px;
+}
+#header_divider{
+  margin: 0;
 }
 </style>

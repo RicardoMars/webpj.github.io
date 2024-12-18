@@ -13,9 +13,20 @@
       <p style="font-size: 30px;">关于我们</p>
     </div>
   </div>
+  <div class="divider">
+    <div class="left_place">关于我们</div>
+    <div class="right_place"><a href="#/" @click="pageReload">首页</a>>关于我们>社会责任</div>
+  </div>
+  <el-divider width="100px" id="header_divider"></el-divider>
 </template>
 
 <script lang="ts" setup>
+
+const pageReload = () => {
+  setTimeout(() => {
+    window.location.reload()
+  }, 0)
+}
 
 </script>
 
@@ -35,5 +46,27 @@
   top: 120px;
   font-size: 50px;
   line-height: 10px;
+}
+.divider{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  /* background-color: red; */
+  justify-content: space-between;
+  align-items: center
+}
+.divider .left_place{
+  color: black;
+  font-size: 20pt;
+  margin-left: 150px;
+  
+}
+.divider .right_place{
+  color: black;
+  font-size: 13pt;
+  margin-right: 150px;
+}
+#header_divider{
+  margin: 0;
 }
 </style>

@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-15 15:15:21
+ * @LastEditTime: 2024-12-18 16:41:32
 -->
 <template>
   <div class="Header">
@@ -13,6 +13,11 @@
       <p style="font-size: 30px;">生态合作伙伴</p>
     </div>
   </div>
+  <div class="divider">
+    <div class="left_place">生态合作伙伴</div>
+    <div class="right_place"><a href="#/" @click="pageReload">首页</a>>生态合作伙伴</div>
+  </div>
+  <el-divider width="100px" id="header_divider"></el-divider>
   <div class="beforeContent">
     <div class="bigContent">
       <div class="contentTitle">合作伙伴</div>
@@ -118,6 +123,11 @@ items2 = [
   }
 ]
 
+const pageReload = () => {
+  setTimeout(() => {
+    window.location.reload()
+  }, 0)
+}
 
 </script>
 
@@ -170,7 +180,23 @@ items2 = [
   width: 100%;
   font-size: 20pt;
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
+.contentTitle::after{
+    content: '';
+    position: absolute;
+    /* 去掉多余的 left 和 right 属性 */
+    top: 48px;
+    height: 4px;
+    width: 130px;
+    background-color: #347bc7;
+}
+
+.el-menu > 
 .customer{
   width: 100%;
   justify-items: center;
@@ -212,5 +238,27 @@ items2 = [
 .inside_content img{
   width: 200px;
   margin-right: 15px;
+}
+.divider{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  /* background-color: red; */
+  justify-content: space-between;
+  align-items: center
+}
+.divider .left_place{
+  color: black;
+  font-size: 20pt;
+  margin-left: 150px;
+  
+}
+.divider .right_place{
+  color: black;
+  font-size: 13pt;
+  margin-right: 150px;
+}
+#header_divider{
+  margin: 0;
 }
 </style>
