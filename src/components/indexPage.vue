@@ -302,7 +302,7 @@ const pageReload = () => {
   height:150px;
 }
 .solutions-divider{
-  background-image: url(../img/divider/Solutions-divider.png);
+  background-image: url(../img/divider/BusinessLine-divider.png);
   background-color: rgb(235, 235, 235);
   background-repeat: no-repeat;
   background-position: center;

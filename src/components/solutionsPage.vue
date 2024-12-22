@@ -10,18 +10,18 @@
   <div class="Header">
     <div class="content">
       <p>Solutions</p>
-      <p style="font-size: 30px;">解决方案</p>
+      <p style="font-size: 30px;">公司业务</p>
     </div>
   </div>
   <div class="divider">
-    <div class="left_place">解决方案</div>
-    <div class="right_place"><a href="#/" @click="pageReload">首页</a>>解决方案</div>
+    <div class="left_place">公司业务</div>
+    <div class="right_place"><a href="#/" @click="pageReload">首页</a>>公司业务</div>
   </div>
   <el-divider width="100px" id="header_divider"></el-divider>
   <div class="bigContent">
     <div class="intoContent" v-for="item in items">
       <p>{{ item.title }}</p>
-      <p>{{ item.content }}</p>
+      <p style="font-size: 15pt; padding-left: 150px; padding-right: 150px;">{{ item.content }}</p>
       <img :src="item.img" alt="img" width="70%">
     </div>
   </div>

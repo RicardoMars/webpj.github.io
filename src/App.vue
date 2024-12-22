@@ -22,7 +22,7 @@
                 @select="handleSelect"
                 >
                     <el-menu-item :class="{ sticky2 : flag}" index="/">首页</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="/solution">解决方案</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="/solution">公司业务</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="/case">客户案例</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="/part">生态与合作</el-menu-item>
                     <el-menu-item :class="{ dropdown:true, sticky2 : flag}" index="/aboutus" disabled>
@@ -58,14 +58,14 @@
                 <div class="footer_content" style=" color: black; float: left; display: flex;">
                     <div class="content_place">
                         <div><span style="font-size: 15pt;">加入我们</span></div>
-                        <div style="margin-top: 10px;"><a href="#" @click="openError">社会招聘</a></div>
-                        <div style="margin-top: 10px;"><a href="#" @click="openError">校园招聘</a></div>
-                        <div style="margin-top: 10px;"><a href="#" @click="openError">国际招聘</a></div>
+                        <div style="margin-top: 10px;"><a href="#/contactus" @click="pageReload">社会招聘</a></div>
+                        <div style="margin-top: 10px;"><a href="#/contactus" @click="pageReload">校园招聘</a></div>
+                        <div style="margin-top: 10px;"><a href="#/contactus" @click="pageReload">国际招聘</a></div>
                     </div>
                     <div class="content_place">
                         <div><span style="font-size: 15pt;">联系我们</span></div>
-                        <div style="margin-top: 10px;"><a href="#" @click="openError">客户服务</a></div>
-                        <div style="margin-top: 10px;"><a href="#" @click="openError">合作洽谈</a></div>
+                        <div style="margin-top: 10px;"><a href="#/contactus" @click="pageReload">客户服务</a></div>
+                        <div style="margin-top: 10px;"><a href="#/contactus" @click="pageReload">合作洽谈</a></div>
                     </div>
                     <div class="content_place">
                         <div><span style="font-size: 15pt;">法律信息</span></div>
@@ -76,7 +76,7 @@
                 <el-divider style="float: left;" />
                 <div style="width: 100%; height: 50px; color: black; float: left; text-align: center;">
                     <div><span>Copyright © 2024 - 2024 All Rights Reserved. 广州铭城计算机科技有限公司 版权所有</span></div>
-                    <div><a href="#">粤ICP备10044164号-1</a></div>
+                    <div><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">粤ICP备10044164号-1</a></div>
                 </div>
             </div>
         </div>
@@ -201,7 +201,11 @@ const clickEven = (val: ValType) => {
     activeIndex.value = result.value
 }
 
-
+const pageReload = () => {
+  setTimeout(() => {
+    window.location.reload()
+  }, 0)
+}
 
 </script>
 

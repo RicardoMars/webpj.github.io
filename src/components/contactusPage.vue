@@ -20,9 +20,14 @@
   <el-divider width="100px" id="header_divider"></el-divider>
   <div class="bigContent">
     <div class="text_content">
+      <p style="font-size: 12pt; font-weight: bold;">联系方式</p>
       <p>公司电话:XXXXXXXXXXX</p>
       <p>公司邮箱:XXXXX@XXX.XXX</p>
       <p>公司地址:XXXXXXXXXXXXXXX</p>
+      <p style="font-size: 12pt; font-weight: bold;">在线咨询</p>
+      <p style="padding-right: 100px;">您还可以通过我们的官方网站在线咨询功能与我们的客服人员进行实时沟通。我们的客服人员将竭诚为您解答问题，并为您提供详细的产品信息和解决方案建议。</p>
+      <p style="font-size: 12pt; font-weight: bold;">社交媒体</p>
+      <p>微信公众号：[公众号名称] </p>
     </div>
     <div id="container"></div>
   </div>
@@ -99,16 +104,19 @@ const pageReload = () => {
   justify-content: space-between;
 }
 #container {
-  width: 70%;
+  width: 60%;
   height: 400px;
   /* border: 1px solid #020202; */
 }
 .text_content{
   color: black;
-  width: 30%;
+  width: 40%;
   height: 400px;
   position: relative;
-  align-content: center;
+  text-align: left;
+}
+.text_content p{
+  margin-left: 100px;
 }
 .divider{
   display: flex;
