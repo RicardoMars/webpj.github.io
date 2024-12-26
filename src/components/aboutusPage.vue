@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-12-18 16:34:41
+ * @LastEditTime: 2024-12-26 15:59:07
 -->
 <template>
   <div class="Header">
@@ -18,7 +18,7 @@
     <div class="right_place"><a href="#/" @click="pageReload">首页</a>>关于我们>介绍</div>
   </div>
   <el-divider width="100px" id="header_divider"></el-divider>
-  <div style="justify-items: center; width: 100%;">
+  <div style="justify-items: center; width: 100%; color: black;">
     <div class="firstBox" style="margin-top: 100px; text-align: left; width: 1100px;">
       <p style="font-size: 23pt;">公司介绍</p>
       <p style="font-size: 18pt;">广州铭诚计算机科技有限公司：创新驱动，卓越服务的行业引领者</p>
