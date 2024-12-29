@@ -20,6 +20,7 @@
   <el-divider width="100px" id="header_divider"></el-divider>
   <div class="bigContent">
     <div class="text_content">
+      <p>如果您对我们的公司、产品或服务感兴趣，或者有任何疑问、合作意向，欢迎随时与我们联系。</p>
       <p style="font-size: 12pt; font-weight: bold;">联系方式</p>
       <p>公司电话:XXXXXXXXXXX</p>
       <p>公司邮箱:XXXXX@XXX.XXX</p>
@@ -111,7 +112,7 @@ const pageReload = () => {
 .text_content{
   color: black;
   width: 40%;
-  height: 400px;
+  height: 500px;
   position: relative;
   text-align: left;
 }

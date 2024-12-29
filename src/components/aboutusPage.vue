@@ -22,34 +22,40 @@
     <div class="firstBox" style="margin-top: 100px; text-align: left; width: 1100px;">
       <p style="font-size: 23pt;">公司介绍</p>
       <p style="font-size: 18pt;">广州铭诚计算机科技有限公司：创新驱动，卓越服务的行业引领者</p>
-      <p>广州铭诚计算机科技有限公司成立于[成立年份]，是一家在[行业名称]领域中迅速崛起并备受瞩目的企业。公司总部位于[公司总部地点]，凭借其卓越的创新能力、专业的团队以及对客户需求的深刻理解，在行业内树立了良好的口碑。
-      我们秉持着“创新、诚信、合作、共赢”的核心价值观，致力于为客户提供高品质、全方位的[行业相关产品/服务]。经过多年的发展，我们已经构建了一个涵盖研发、生产、销售、服务等多个环节的完整产业链，拥有先进的生产设备、精湛的制造工艺和严格的质量检测体系，确保每一个产品都能达到国际一流标准。
-      我们的团队由一群充满激情、富有创造力且经验丰富的专业人士组成。其中包括行业资深的专家、技术精湛的工程师、富有创意的设计师以及贴心周到的客户服务人员。他们凭借各自的专业知识和技能，在不同的岗位上协同合作，为公司的持续发展和客户的满意不断努力。
+      <p>广州铭诚计算机科技有限公司注册成立于2007年，总部位于广东省广州市，是一家在系统集成领域极具影响力的高科技企业，华南地区知名的信息系统集成商、企业级IT服
+        务商和信息安全服务商，专注于信息技术服务领域，公司凭借多年来在信息技术领域的深耕细作，业务范围已经覆盖华南地区政府、医疗、教育、金融等领域，为众多行业客户提供
+        全面、专业、高效的系统集成解决方案。业务包括IT基础设施规划与集成、IT基础设施运维及服务、信息安全保障及咨询服务、数据中心集成建设与运维、建筑及园区智能化系统集成
+        及运维服务，为政府及企业客户提供从咨询到实施运维的一体化信息技术服务。我们将不懈努力持续打造以用户价值为根本、以合作伙伴为基石、以技术创新为动力的IT服务新生态。
       </p>
     </div>
     <div class="secBox">
       <p style="font-size: 20pt; width: auto;">公司使命</p>
       <el-divider direction="vertical" style="height: 200px; margin-left: 200px; margin-right: 100px; border-width: 2px;"></el-divider>
-      <p style="width: 400px;">我们的使命是通过不断的创新和卓越的服务，为客户提供[具体的产品/服务成果，如高效节能的解决方案、个性化的用户体验等]，推动[行业名称]行业的发展进步，为社会创造更大的价值。</p>
+      <p style="width: 400px;">我们的使命是通过不断的创新和卓越的服务，为客户提供高效节能的解决方案、个性化的用户体验等，推动行业的发展进步，为社会创造更大的价值。</p>
     </div>
     <div class="thridBox">
       <p style="color: white; font-size: 30pt;">发展历程</p>
     </div>
     <div class="fourthBox">
       <div class="inBox">
-        <p style="font-size: 16pt;">初创期</p>
+        <p style="font-size: 16pt;">2007</p>
         <el-divider></el-divider>
-        <p style="padding-left: 50px; padding-right: 50px;">[公司名称]在[成立背景及初衷简单描述]的情况下应运而生。创业初期，我们面临着诸多挑战，但凭借团队的坚韧不拔和对市场的敏锐洞察力，成功推出了首款[具有代表性的产品/服务]，初步在市场上站稳脚跟。</p>
+        <p style="padding-left: 50px; padding-right: 50px;">铭城科技在广州注册成立</p>
       </div>
       <div class="inBox">
-        <p style="font-size: 16pt;">成长阶段</p>
+        <p style="font-size: 16pt;">2013-2014</p>
         <el-divider></el-divider>
-        <p style="padding-left: 50px; padding-right: 50px;">随着市场对我们产品/服务的认可，公司进入快速发展期。我们加大了研发投入，不断优化产品性能、拓展产品线，与多家知名企业建立了合作关系，业务范围逐渐覆盖[具体的业务覆盖区域或领域]。</p>
+        <p style="padding-left: 50px; padding-right: 50px;">取得计算机信息安全资质证书，以及广东省安全技术防范系统设计、施工、维修资格证书。<br />取得ISO14001：环境管理体系认证证书、OHSAS18001职业健康安全管理体系认证证书、高新技术企业证书</p>
       </div>
       <div class="inBox">
-        <p style="font-size: 16pt;">成熟期</p>
+        <p style="font-size: 16pt;">2015</p>
         <el-divider></el-divider>
-        <p style="padding-left: 50px; padding-right: 50px;">如今，[公司名称]已经成为[行业名称]领域的重要参与者。我们将继续巩固自身优势，积极拓展国际市场，开展更多跨领域的合作项目，向着成为全球领先的[行业名称]企业的目标不断迈进。</p>
+        <p style="padding-left: 50px; padding-right: 50px;">取得：<br />ISO9001:质量管理体系认证证书<br />CMMI3:软件成熟度模型证书<br /><br />中小企业信用AAA证书</p>
+      </div>
+      <div class="inBox">
+        <p style="font-size: 16pt;">至今</p>
+        <el-divider></el-divider>
+        <p style="padding-left: 50px; padding-right: 50px;">公司取得13项专利，70+软著</p>
       </div>
     </div>
     <div class="fifthBox">

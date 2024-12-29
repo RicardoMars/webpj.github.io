@@ -20,25 +20,28 @@
   <el-divider width="100px" id="header_divider"></el-divider>
   <div class="bigContent">
     <div class="place_1">
-      <div class="imgPlace"></div>
-      <div class="textPlace">
+      <a href="#/caseOne">
+        <div class="imgPlace1"></div>
+      </a>
+      <!-- <div class="textPlace">
         <p style="padding-left: 100px; padding-right: 100px; font-size: 20pt;">这里是标题 <span style="font-size: 15pt;">This is Title</span></p>
         <p style="padding-left: 100px; padding-right: 100px; font-size: 12pt;">这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文</p>
-      </div>
+      </div> -->
     </div>
     <div class="place_1">
-      <div class="textPlace">
-        <p style="padding-left: 100px; padding-right: 100px; font-size: 20pt;">这里是标题 <span style="font-size: 15pt;">This is Title</span></p>
-        <p style="padding-left: 100px; padding-right: 100px; font-size: 12pt;">这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文</p>
-      </div>
-      <div class="imgPlace"></div>
+      <a href="#/caseTwo">
+        <div class="imgPlace2"></div>
+      </a>
     </div>
     <div class="place_1">
-      <div class="imgPlace"></div>
-      <div class="textPlace">
-        <p style="padding-left: 100px; padding-right: 100px; font-size: 20pt;">这里是标题 <span style="font-size: 15pt;">This is Title</span></p>
-        <p style="padding-left: 100px; padding-right: 100px; font-size: 12pt;">这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文</p>
-      </div>
+      <a href="#/caseThird">
+        <div class="imgPlace3"></div>
+      </a>
+    </div>
+    <div class="place_1">
+      <a href="#/caseFour">
+        <div class="imgPlace4"></div>
+      </a>
     </div>
   </div>
 </template>
@@ -106,12 +109,41 @@ const pageReload = () => {
   transition: all 0.5s;
 }
 .bigContent .place_1:hover{
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.8);
 }
 .bigContent .place_1 .imgPlace{
-  width: 400px;
+  width: 1200px;
   height: 300px;
-  background-image: url('../img/placeholder_2.jpg');
+  background-image: url('../img/case/1.1.png');
+  background-size: cover;
+}
+.bigContent .place_1 .imgPlace1{
+  width: 1200px;
+  height: 300px;
+  background-image: url('../img/case/1.1.png');
+  background-size: cover;
+  background-position: center center;
+}
+.bigContent .place_1 .imgPlace2{
+  width: 1200px;
+  height: 300px;
+  background-image: url('../img/case/2.1.png');
+  background-size: cover;
+  background-position: center center;
+}
+.bigContent .place_1 .imgPlace3{
+  width: 1200px;
+  height: 300px;
+  background-image: url('../img/case/3.1.png');
+  background-size: cover;
+  background-position: center center;
+}
+.bigContent .place_1 .imgPlace4{
+  width: 1200px;
+  height: 300px;
+  background-image: url('../img/case/4.1.png');
+  background-size: cover;
+  background-position: center center;
 }
 .bigContent .place_1 .textPlace{
   width: 800px;

@@ -15,6 +15,10 @@ import aboutusPage from "../components/aboutusPage.vue"
 import contactusPage from "../components/contactusPage.vue"
 import qualifyPage from "../components/qualifyPage.vue"
 import responsePage from "../components/responsePage.vue"
+import caseOne from "../components/caseOne.vue"
+import caseTwo from "../components/caseTwo.vue"
+import caseThird from "../components/caseThird.vue"
+import caseFour from "../components/caseFour.vue"
 
 const routes = [
     {
@@ -56,6 +60,26 @@ const routes = [
         path: '/response',
         name: 'responsePage',
         component: responsePage
+    },
+    {
+        path: '/caseOne',
+        name: 'caseOne',
+        component: caseOne
+    },
+    {
+        path: '/caseTwo',
+        name: 'caseTwo',
+        component: caseTwo
+    },
+    {
+        path: '/caseThird',
+        name: 'caseThird',
+        component: caseThird
+    },
+    {
+        path: '/caseFour',
+        name: 'caseFour',
+        component: caseFour
     }
 ]
 

@@ -11,7 +11,7 @@
         <div class="container">
             <div class="header" :class="{ sticky: flag}">
                 <img style="width: 250px"
-                src="./img/logo2.png"
+                :src="headerLogo"
                 alt="Enterprise Logo"
                 class="LogoPic"/>
                 <el-menu
@@ -22,7 +22,7 @@
                 @select="handleSelect"
                 >
                     <el-menu-item :class="{ sticky2 : flag}" index="/">首页</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="/solution">公司业务</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="/solution">解决方案</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="/case">客户案例</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="/part">生态与合作</el-menu-item>
                     <el-menu-item :class="{ dropdown:true, sticky2 : flag}" index="/aboutus" disabled>
@@ -30,7 +30,7 @@
                         <div class="dropdown-content">
                             <a href="#" @click.prevent="handleSelect('/aboutus',['/aboutus'])">介绍</a>
                             <a href="#" @click.prevent="handleSelect('/qualify',['/qualify'])">资质荣誉</a>
-                            <a href="#" @click.prevent="handleSelect('/response',['/response'])">社会责任</a>
+                            <!-- <a href="#" @click.prevent="handleSelect('/response',['/response'])">社会责任</a> -->
                         </div>
                     </el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="/contactus">联系我们</el-menu-item>
@@ -95,6 +95,7 @@ const result = ref('')
 const flag = ref(false)
 const router = useRouter()
 const activeIndex = ref('');
+var headerLogo = new URL('./img/logo2-white.png', import.meta.url).href
 
 /**
  * 处理菜单选择事件的函数
@@ -156,6 +157,11 @@ const scrollEvent = () => {
 //   console.log('scrollTop:', dis);
   // 使用 flag 的方式要通过 ref
   flag.value = dis > 150;
+  if (dis > 150) {
+    headerLogo = new URL('./img/logo2.png', import.meta.url).href
+  } else {
+    headerLogo = new URL('./img/logo2-white.png', import.meta.url).href
+  }
 }
 
 onBeforeMount(() => {
@@ -167,6 +173,18 @@ onBeforeMount(() => {
             break
         case '/response':
             activeIndex.value = '/aboutus'
+            break
+        case '/caseOne':
+            activeIndex.value = '/case'
+            break
+        case '/caseTwo':
+            activeIndex.value = '/case'
+            break
+        case '/caseThird':
+            activeIndex.value = '/case'
+            break
+        case '/caseFour':
+            activeIndex.value = '/case'
             break
     }
     console.log(activeIndex)

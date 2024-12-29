@@ -22,7 +22,7 @@
     <div class="bigContent">
       <div class="contentTitle">合作伙伴</div>
       <div class="partPage" v-for="item in items2">
-        <img :src="item.logo" style="width: 110px;">
+        <img :src="item.logo" style="width: 70%;">
       </div>
     </div>
     <el-divider></el-divider>
@@ -37,6 +37,33 @@
           <div class="inside_content" v-for="item in images1"><img :src="item.logo"></div>
         </div>
       </div>
+      <div class="customer_in" v-for="item in images2">
+        <div class="left_logo">
+          <img :src="item.src" style="width: 120px;">
+          <p>{{ item.title }}</p>
+        </div>
+        <div class="right_content">
+          <div class="inside_content" v-for="item in images2_1"><img :src="item.logo"></div>
+        </div>
+      </div>
+      <div class="customer_in" v-for="item in images3">
+        <div class="left_logo">
+          <img :src="item.src" style="width: 120px;">
+          <p>{{ item.title }}</p>
+        </div>
+        <div class="right_content">
+          <div class="inside_content" v-for="item in images3_1"><img :src="item.logo"></div>
+        </div>
+      </div>
+      <div class="customer_in" v-for="item in images4" style="height: 300px;">
+        <div class="left_logo">
+          <img :src="item.src" style="width: 120px;">
+          <p>{{ item.title }}</p>
+        </div>
+        <div class="right_content">
+          <div class="inside_content" v-for="item in images4_1"><img :src="item.logo"></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -45,34 +72,34 @@
 
 const images1 = [
   {
-    logo: new URL('../img/customer/gov/1.png', import.meta.url).href,
+    logo: new URL('../img/customer/gov/1.1.png', import.meta.url).href,
   },
   {
-    logo: new URL('../img/customer/gov/1.png', import.meta.url).href,
+    logo: new URL('../img/customer/gov/1.2.png', import.meta.url).href,
   },
   {
-    logo: new URL('../img/customer/gov/1.png', import.meta.url).href,
+    logo: new URL('../img/customer/gov/1.3.png', import.meta.url).href,
   },
   {
-    logo: new URL('../img/customer/gov/1.png', import.meta.url).href,
+    logo: new URL('../img/customer/gov/1.4.png', import.meta.url).href,
   },
   {
-    logo: new URL('../img/customer/gov/1.png', import.meta.url).href,
+    logo: new URL('../img/customer/gov/1.5.png', import.meta.url).href,
   },
   {
-    logo: new URL('../img/customer/gov/1.png', import.meta.url).href,
+    logo: new URL('../img/customer/gov/1.6.png', import.meta.url).href,
   },
   {
-    logo: new URL('../img/customer/gov/1.png', import.meta.url).href,
+    logo: new URL('../img/customer/gov/1.7.png', import.meta.url).href,
   },
   {
-    logo: new URL('../img/customer/gov/1.png', import.meta.url).href,
+    logo: new URL('../img/customer/gov/1.8.png', import.meta.url).href,
   },
   {
-    logo: new URL('../img/customer/gov/1.png', import.meta.url).href,
+    logo: new URL('../img/customer/gov/1.9.png', import.meta.url).href,
   },
   {
-    logo: new URL('../img/customer/gov/1.png', import.meta.url).href,
+    logo: new URL('../img/customer/gov/1.10.png', import.meta.url).href,
   }
 ]
 
@@ -80,6 +107,114 @@ const images = [
   {
     title: '政府公共事业',
     src: new URL('../img/customer/gov.svg', import.meta.url).href,
+  },
+]
+
+const images2 = [
+  {
+    title: '金融行业',
+    src: new URL('../img/customer/finance.svg', import.meta.url).href,
+  },
+]
+const images2_1 = [
+  {
+    logo: new URL('../img/customer/finance/1.1.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/finance/1.2.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/finance/1.3.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/finance/1.4.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/finance/1.5.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/finance/1.6.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/finance/1.7.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/finance/1.8.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/finance/1.9.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/finance/1.10.png', import.meta.url).href,
+  }
+]
+
+const images3 = [
+  {
+    title: '教育行业',
+    src: new URL('../img/customer/edu.svg', import.meta.url).href,
+  },
+]
+const images3_1 = [
+  {
+    logo: new URL('../img/customer/edu/1.1.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/edu/1.2.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/edu/1.3.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/edu/1.4.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/edu/1.5.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/edu/1.6.png', import.meta.url).href,
+  }
+]
+
+const images4 = [
+  {
+    title: '企业',
+    src: new URL('../img/customer/company.svg', import.meta.url).href,
+  },
+]
+const images4_1 = [
+  {
+    logo: new URL('../img/customer/company/1.1.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/company/1.2.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/company/1.3.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/company/1.4.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/company/1.5.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/company/1.6.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/company/1.7.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/company/1.8.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/company/1.9.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/company/1.10.png', import.meta.url).href,
+  },
+  {
+    logo: new URL('../img/customer/company/1.11.png', import.meta.url).href,
   }
 ]
 
@@ -101,7 +236,7 @@ items2 = [
     logo: new URL('../img/partners/logo2.png', import.meta.url).href
   },
   {
-    logo: new URL('../img/partners/logo3.svg', import.meta.url).href
+    logo: new URL('../img/partners/logo3.png', import.meta.url).href
   },
   {
     logo: new URL('../img/partners/logo4.png', import.meta.url).href
@@ -120,6 +255,27 @@ items2 = [
   },
   {
     logo: new URL('../img/partners/logo9.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo10.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo11.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo12.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo13.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo14.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo15.png', import.meta.url).href
+  },
+  {
+    logo: new URL('../img/partners/logo16.png', import.meta.url).href
   }
 ]
 
@@ -208,6 +364,7 @@ const pageReload = () => {
   position: relative;
   border-top-left-radius: 20%;
   border-bottom-left-radius: 20%;
+  margin-top: 30px;
 }
 .left_logo{
   position: absolute;
