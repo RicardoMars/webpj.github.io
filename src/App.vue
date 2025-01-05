@@ -22,7 +22,8 @@
                 @select="handleSelect"
                 >
                     <el-menu-item :class="{ sticky2 : flag}" index="/">首页</el-menu-item>
-                    <el-menu-item :class="{ sticky2 : flag}" index="/solution">解决方案</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="/solution">公司业务</el-menu-item>
+                    <el-menu-item :class="{ sticky2 : flag}" index="/solution_2" disabled>解决方案</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="/case">客户案例</el-menu-item>
                     <el-menu-item :class="{ sticky2 : flag}" index="/part">生态与合作</el-menu-item>
                     <el-menu-item :class="{ dropdown:true, sticky2 : flag}" index="/aboutus" disabled>
@@ -116,6 +117,9 @@ const handleSelect = (key: string, keyPath: string[]) => {
       // 当选中第二个菜单项时，导航到名为 'solutionPage' 的路由
       router.push({ name: 'solutionPage'})
       break
+    case '/solution_2':
+      router.push({ name: 'solutionPage_2'})
+      break
     case '/case':
       // 当选中第二个菜单项时，导航到名为 'casePage' 的路由
       router.push({ name: 'casePage'})
@@ -185,6 +189,15 @@ onBeforeMount(() => {
             break
         case '/caseFour':
             activeIndex.value = '/case'
+            break
+        case '/businessPage1':
+            activeIndex.value = '/solution'
+            break
+        case '/businessPage2':
+            activeIndex.value = '/solution'
+            break
+        case '/businessPage3':
+            activeIndex.value = '/solution'
             break
     }
     console.log(activeIndex)

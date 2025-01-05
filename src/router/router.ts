@@ -19,6 +19,10 @@ import caseOne from "../components/caseOne.vue"
 import caseTwo from "../components/caseTwo.vue"
 import caseThird from "../components/caseThird.vue"
 import caseFour from "../components/caseFour.vue"
+import solutionPage_2 from "../components/solutionsPage_2.vue"
+import businessPage1 from "../components/business/businessPage1.vue"
+import businessPage2 from "../components/business/businessPage2.vue"
+import businessPage3 from "../components/business/businessPage3.vue"
 
 const routes = [
     {
@@ -30,6 +34,11 @@ const routes = [
         path: '/solution',
         name: 'solutionPage',
         component: solutionPage
+    },
+    {
+        path: '/solution_2',
+        name: 'solutionPage_2',
+        component: solutionPage_2
     },
     {
         path: '/case',
@@ -80,6 +89,21 @@ const routes = [
         path: '/caseFour',
         name: 'caseFour',
         component: caseFour
+    },
+    {
+        path: '/businessPage1',
+        name: 'businessPage1',
+        component: businessPage1
+    },
+    {
+        path: '/businessPage2',
+        name: 'businessPage2',
+        component: businessPage2
+    },
+    {
+        path: '/businessPage3',
+        name: 'businessPage3',
+        component: businessPage3
     }
 ]
 

@@ -21,7 +21,7 @@
         <p style="margin: 0;">基础设施集成及运维</p>
         <p style="margin: 0; font-size: 10pt;">Integration and operation of infrastructure</p>
       </div>
-      <a href="#/solution" @click="pageReload">
+      <a href="#/businessPage1" @click="pageReload">
         <div class="target1">
           <p style="margin: 0; font-size: 15pt;">基础设施集成及运维</p>
           <p style="margin: 0; font-size: 8pt; color:aquamarine; ">Integration and operation of infrastructure</p>
@@ -36,7 +36,7 @@
           <p style="margin: 0;">信息安全集成与运维</p>
           <p style="margin: 0; font-size: 10pt;">Integration and operation of information security</p>
         </div>
-        <a href="#/solution" @click="pageReload">
+        <a href="#/businessPage2" @click="pageReload">
           <div class="target2">
             <p style="margin: 0; font-size: 15pt;">信息安全集成与运维</p>
             <p style="margin: 0; font-size: 8pt; color:aquamarine; ">Integration and operation of information security</p>
@@ -51,7 +51,7 @@
           <p style="margin: 0;">智能化系统集成及解决方案</p>
           <p style="margin: 0; font-size: 10pt;">Intelligent system integration and solutions</p>
         </div>
-        <a href="#/solution" @click="pageReload">
+        <a href="#/businessPage3" @click="pageReload">
           <div class="target3">
             <p style="margin: 0; font-size: 15pt;">智能化系统集成及解决方案</p>
             <p style="margin: 0; font-size: 8pt; color:aquamarine; ">Intelligent system integration and solutions</p>
@@ -434,7 +434,7 @@ const pageReload = () => {
   position: relative;
   width: 100%;
   height: 800px;
-  background-image: url('../img/Background5-30.jpg');
+  background-image: url('../img/Background5.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -447,7 +447,7 @@ const pageReload = () => {
   justify-content: center;
 }
 .bigContent div{
-  color: white;
+  color: black;
   width: 200px;
   height: 250px;
   margin-left: 20px;
@@ -466,6 +466,7 @@ const pageReload = () => {
   opacity: 0;
 }
 .bigContent .box1 .target1{
+  color: white;
   position: absolute;
   opacity: 0;
   background-color: rgb(52, 149, 206);
@@ -486,6 +487,7 @@ const pageReload = () => {
   opacity: 0;
 }
 .bigContent .box1 .target2{
+  color: white;
   position: absolute;
   opacity: 0;
   background-color: rgb(52, 149, 206);
@@ -503,6 +505,7 @@ const pageReload = () => {
   opacity: 0;
 }
 .bigContent .box1 .target3{
+  color: white;
   position: absolute;
   opacity: 0;
   background-color: rgb(52, 149, 206);

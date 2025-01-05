@@ -22,25 +22,30 @@
     <div class="place_1">
       <a href="#/caseOne">
         <div class="imgPlace1"></div>
+        <div class="textPlace">
+          <ul>
+            <li>某海关信创项目解决方案案例</li>
+            <li>某国有银行信创项目解决方案案例</li>
+          </ul>
+        </div>
       </a>
-      <!-- <div class="textPlace">
-        <p style="padding-left: 100px; padding-right: 100px; font-size: 20pt;">这里是标题 <span style="font-size: 15pt;">This is Title</span></p>
-        <p style="padding-left: 100px; padding-right: 100px; font-size: 12pt;">这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文这里是正文正文正文正文正文正文</p>
-      </div> -->
     </div>
     <div class="place_1">
       <a href="#/caseTwo">
         <div class="imgPlace2"></div>
+        <div class="textPlace">123</div>
       </a>
     </div>
     <div class="place_1">
       <a href="#/caseThird">
         <div class="imgPlace3"></div>
+        <div class="textPlace">123</div>
       </a>
     </div>
     <div class="place_1">
       <a href="#/caseFour">
         <div class="imgPlace4"></div>
+        <div class="textPlace">123</div>
       </a>
     </div>
   </div>
@@ -98,56 +103,59 @@ const pageReload = () => {
 .bigContent{
   width: 100%;
   height: auto;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .bigContent .place_1{
-  width: 1200px;
-  height: auto;
+  width: 400px;
+  height: 600px;
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   transition: all 0.5s;
+  border: 1px solid #e4e4e4;
 }
 .bigContent .place_1:hover{
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.8);
 }
-.bigContent .place_1 .imgPlace{
-  width: 1200px;
-  height: 300px;
-  background-image: url('../img/case/1.1.png');
-  background-size: cover;
-}
 .bigContent .place_1 .imgPlace1{
-  width: 1200px;
+  width: 400px;
   height: 300px;
   background-image: url('../img/case/1.1.png');
   background-size: cover;
   background-position: center center;
 }
 .bigContent .place_1 .imgPlace2{
-  width: 1200px;
+  width: 400px;
   height: 300px;
   background-image: url('../img/case/2.1.png');
   background-size: cover;
   background-position: center center;
 }
 .bigContent .place_1 .imgPlace3{
-  width: 1200px;
+  width: 400px;
   height: 300px;
   background-image: url('../img/case/3.1.png');
   background-size: cover;
   background-position: center center;
 }
 .bigContent .place_1 .imgPlace4{
-  width: 1200px;
+  width: 400px;
   height: 300px;
   background-image: url('../img/case/4.1.png');
   background-size: cover;
   background-position: center center;
 }
-.bigContent .place_1 .textPlace{
-  width: 800px;
+.textPlace{
+  color: black;
+  width: 100%;
   height: 300px;
-  background-color: green;
+  text-align: left;
+}
+.textPlace ul{
+  list-style: circle;
 }
 </style>
