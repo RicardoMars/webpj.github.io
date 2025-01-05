@@ -26,6 +26,7 @@
           <ul>
             <li>某海关信创项目解决方案案例</li>
             <li>某国有银行信创项目解决方案案例</li>
+            <li>某运营商信创项目解决方案案例</li>
           </ul>
         </div>
       </a>
@@ -33,19 +34,37 @@
     <div class="place_1">
       <a href="#/caseTwo">
         <div class="imgPlace2"></div>
-        <div class="textPlace">123</div>
+        <div class="textPlace">
+          <ul>
+            <li>智慧校园-华南理工大学智慧校园管理平台</li>
+            <li>智慧政务-交通运输服务指挥调度平台</li>
+            <li>智慧政务-生态环境大数据应用平台</li>
+          </ul>
+        </div>
       </a>
     </div>
     <div class="place_1">
       <a href="#/caseThird">
         <div class="imgPlace3"></div>
-        <div class="textPlace">123</div>
+        <div class="textPlace">
+          <ul>
+            <li>数据库保护--广州海关核心数据保护项目</li>
+            <li>医疗信息化--中山大学附属第六医院</li>
+            <li>私有云--Vmware虚拟化平台构建</li>
+          </ul>
+        </div>
       </a>
     </div>
     <div class="place_1">
       <a href="#/caseFour">
         <div class="imgPlace4"></div>
-        <div class="textPlace">123</div>
+        <div class="textPlace">
+          <ul>
+            <li>网络安全--佛山市高明区人民医院</li>
+            <li>网络安全--信息安全加固与等级保护建设项目</li>
+            <li>网络安全--南方数据院2020年老挝南塔河及越南永新网络安全</li>
+          </ul>
+        </div>
       </a>
     </div>
   </div>
@@ -124,28 +143,28 @@ const pageReload = () => {
 .bigContent .place_1 .imgPlace1{
   width: 400px;
   height: 300px;
-  background-image: url('../img/case/1.1.png');
+  background-image: url('../img/case/1.1.jpg');
   background-size: cover;
   background-position: center center;
 }
 .bigContent .place_1 .imgPlace2{
   width: 400px;
   height: 300px;
-  background-image: url('../img/case/2.1.png');
+  background-image: url('../img/case/2.1.jpg');
   background-size: cover;
   background-position: center center;
 }
 .bigContent .place_1 .imgPlace3{
   width: 400px;
   height: 300px;
-  background-image: url('../img/case/3.1.png');
+  background-image: url('../img/case/3.1.jpg');
   background-size: cover;
   background-position: center center;
 }
 .bigContent .place_1 .imgPlace4{
   width: 400px;
   height: 300px;
-  background-image: url('../img/case/4.1.png');
+  background-image: url('../img/case/4.1.jpg');
   background-size: cover;
   background-position: center center;
 }

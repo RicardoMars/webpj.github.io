@@ -139,6 +139,6 @@ const pageReload = () => {
 .bigContent .place_1 .textPlace{
   width: 800px;
   height: auto;
-  background-color: rgb(202, 231, 255);
+  background-color: rgb(222, 240, 255);
 }
 </style>

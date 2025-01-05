@@ -241,7 +241,6 @@ const pageReload = () => {
 </script>
 
 <style>
-@import './assets/font.css';
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

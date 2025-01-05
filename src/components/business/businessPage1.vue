@@ -108,7 +108,7 @@
       </table>
       </center>
       <br />
-      <p style="font-size: 15pt; text-align: left; text-indent: 2rem;">我们公司作为专业的信息系统集成服务商，将始终秉承“<span style="color: red;">客户至上，创新引领</span>”的理念，为客户提供优质的硬件、软件及解决方案。我们期待与您携手合作，共创美好的未来！</p>
+      <p style="font-size: 15pt; text-align: left; text-indent: 2rem; margin: 0;">我们公司作为专业的信息系统集成服务商，将始终秉承“<span style="color: red;">客户至上，创新引领</span>”的理念，为客户提供优质的硬件、软件及解决方案。我们期待与您携手合作，共创美好的未来！</p>
     </div>
   </div>
 </template>
