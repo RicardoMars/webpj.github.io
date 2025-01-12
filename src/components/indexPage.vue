@@ -17,7 +17,7 @@
     <div class="bigContent">
       <div class="box1">
         <div class="show1">
-        <img src="../img/indexImg/1.1.png" alt="img1" style="object-fit: cover; width: 70%;" />
+        <img src="../img/indexImg/1.1.png" alt="img1" style="object-fit: cover; width: 70%; height: 160px;" />
         <p style="margin: 0;">基础设施集成及运维</p>
         <p style="margin: 0; font-size: 10pt;">Integration and operation of infrastructure</p>
       </div>
@@ -32,7 +32,7 @@
       </div>
       <div class="box1">
         <div class="show2">
-          <img src="../img/indexImg/1.2.png" alt="img1" style="object-fit: cover; width: 70%;" />
+          <img src="../img/indexImg/1.2.png" alt="img1" style="object-fit: cover; width: 70%; height: 160px;" />
           <p style="margin: 0;">信息安全集成与运维</p>
           <p style="margin: 0; font-size: 10pt;">Integration and operation of information security</p>
         </div>
@@ -47,7 +47,7 @@
       </div>
       <div class="box1">
         <div class="show3">
-          <img src="../img/indexImg/1.3.png" alt="img1" style="object-fit: cover; width: 70%;" />
+          <img src="../img/indexImg/1.3.png" alt="img1" style="object-fit: cover; width: 70%; height: 160px;" />
           <p style="margin: 0;">智能化系统集成及解决方案</p>
           <p style="margin: 0; font-size: 10pt;">Intelligent system integration and solutions</p>
         </div>
@@ -66,21 +66,21 @@
   <div class="info_main">
     <div class="elrow">
       <div class="col1">
-        <div class="col_img"><a href="#/aboutus" @click="pageReload"><img src="../img/page1-introduce.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/aboutus" @click="pageReload"><img src="../img/page1-introduce.png" alt="Image" style="width: 100%; height: 160px; object-fit: cover;"></a></div>
         <div class="col_text">
           <h2 style="color: black;">公司介绍</h2>
           <span style="color: black;">广州铭诚计算机科技有限公司注册成立于2007年，是一家在系统集成领域极具影响力的高科技企业。总部位于广东省广州市，凭借其卓越的创新能力、专业的团队以及对客户需求的深刻理解，在行业内树立了良好的口碑。</span>
         </div>
       </div>
       <div class="col2">
-        <div class="col_img"><a href="#/qualify" @click="pageReload"><img src="../img/page1-license.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/qualify" @click="pageReload"><img src="../img/page1-license.png" alt="Image" style="width: 100%; height: 160px; object-fit: cover;"></a></div>
         <div class="col_text">
           <h2 style="color: black;">企业资质</h2>
           <span style="color: black;">通过严格的认证和审批程序，我们获得了多项资质证书，证明了我们在技术实力、质量管理和服务水平等方面的领先优势。这些资质为客户提供了更多保障，体现了我们对质量和规范的坚守。</span>
         </div>
       </div>
       <div class="col1">
-        <div class="col_img"><a href="#/qualify" @click="pageReload"><img src="../img/page1-weget.png" alt="Image" style="width: 80%; height: 80%; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/qualify" @click="pageReload"><img src="../img/page1-weget.png" alt="Image" style="width: 100%; height: 160px; object-fit: cover;"></a></div>
         <div class="col_text">
           <h2 style="color: black;">企业荣誉</h2>
           <span style="color: black;">通过持续创新和优质服务，我们荣获了多个行业奖项和社会认可。这些荣誉不仅是对我们实力的肯定，也激励我们不断追求卓越，为客户提供更高价值的产品和服务。</span>
@@ -338,7 +338,7 @@ const pageReload = () => {
 .col_img2 img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   filter:brightness(0.6)
 }
 .col_text{

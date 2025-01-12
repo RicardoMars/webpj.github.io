@@ -108,7 +108,71 @@
       </table>
       </center>
       <br />
-      <p style="font-size: 15pt; text-align: left; text-indent: 2rem; margin: 0;">我们公司作为专业的信息系统集成服务商，将始终秉承“<span style="color: red;">客户至上，创新引领</span>”的理念，为客户提供优质的硬件、软件及解决方案。我们期待与您携手合作，共创美好的未来！</p>
+      <img style="width: 900px;" src="../../img/solution/1.1.png" />
+      <img style="width: 900px;" src="../../img/solution/1.2.png" />
+      <p>以下是根据您提供的售后服务承诺内容生成的表格：</p>
+      <center>
+      <table class="supportTable3" border="1px" width="1000px">
+        <tbody>
+          <tr style="height: 50px;">
+            <td style="width: 300px;">售后服务承诺</td>
+            <td>具体内容</td>
+          </tr>
+          <tr>
+            <td colspan="2">一、售后服务总体承诺</td>
+          </tr>
+          <tr>
+            <td>服务期限</td>
+            <td>提供所投产品的2年原厂级运维服务，硬件提供五年的质保和上门维护服务（从项目最终验收完毕之日起计算）</td>
+          </tr>
+          <tr>
+            <td>服务范围</td>
+            <td>涵盖软、硬件质保和上门维护服务</td>
+          </tr>
+          <tr>
+            <td colspan="2">二、软件维保服务承诺</td>
+          </tr>
+          <tr>
+            <td>紧急救援</td>
+            <td>7x24小时不间断提供软件故障紧急救援及维保技术支持</td>
+          </tr>
+          <tr>
+            <td>响应与现场支持</td>
+            <td>提供软件重新安装、版本升级、配置修改及功能重新设定；提交系统维护技术，交付维护密码（授权）</td>
+          </tr>
+          <tr>
+            <td>协助与支持</td>
+            <td>协助数据库一体机终端安装和维护；协助解决应用系统问题；协助制定灾难恢复计划和演练；提供现场值守、数据迁移服务；变更文档维护</td>
+          </tr>
+          <tr>
+            <td colspan="2">三、硬件维保服务承诺</td>
+          </tr>
+          <tr>
+            <td>备件提供</td>
+            <td>根据机器配置，协助提供原厂备件购买渠道，备件费用另案支付</td>
+          </tr>
+          <tr>
+            <td>维修与换件</td>
+            <td>到达现场提供维修及原厂备件换件服务</td>
+          </tr>
+          <tr>
+            <td>数据保护</td>
+            <td>现场维修时，用户有权处置更换下来的存储类零部件（如硬盘、磁带）</td>
+          </tr>
+          <tr>
+            <td>响应与到场时间</td>
+            <td>紧急故障：10分钟内响应，2小时内到场；一般故障：2小时内响应，按时到场</td>
+          </tr>
+          <tr>
+            <td>其他服务</td>
+            <td>提供硬件微码升级服务；提供设备联接和调试；每次服务后提交服务工作报告并签字确认</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <p>请注意，这个表格是基于您提供的信息生成的，并可能需要根据实际情况进行微调。希望这个表格能够满足您的需求！</p>
+      <br />
+      <p style="font-size: 15pt; text-align: left; text-indent: 2rem; margin: 0;">我们公司作为专业的信息系统集成服务商，将始终秉承“客户至上，创新引领”的理念，为客户提供优质的硬件、软件及解决方案。我们期待与您携手合作，共创美好的未来！</p>
     </div>
   </div>
 </template>
@@ -129,12 +193,15 @@ const pageReload = () => {
   width: 100%;
   height: 300px;
   background-image: url('../../img/topBackground.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 .content{
   text-align: right;
   position: absolute;
-  color: wheat;
+  color: rgb(76, 65, 218);
   right: 300px;
   top: 120px;
   font-size: 50px;
@@ -202,5 +269,14 @@ const pageReload = () => {
 }
 .supportTable2 ul li{
   text-align: left;
+}
+.supportTable3{
+  height: 150px;
+  text-align: center;
+  color: black;
+  margin-top: 20px;
+}
+.supportTable3 tr{
+  height: 80px;
 }
 </style>

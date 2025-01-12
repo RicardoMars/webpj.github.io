@@ -29,7 +29,7 @@
       <p class="subContent">3.数据安全集成</p>
       <p class="subContent">数据是企业的核心资产，我们深知保护数据安全的重要性。因此，我们提供全面的数据安全集成服务，包括数据加密、数据备份与恢复、数据泄露防护等。通过采用先进的技术和严格的管理措施，我们确保企业数据的完整性、可用性和机密性。</p>
       <br />
-      <img src="../../img/solution/safeservice.png" />
+      <img src="../../img/solution/2.1.png" />
       <p class="subTitle">二、信息安全运维服务</p>
       <p class="subContent">除了信息安全集成服务外，我们还提供专业的信息安全运维服务，帮助企业实时监控和管理信息系统，及时发现并解决潜在的安全隐患。我们的信息安全运维服务包括以下几个方面：</p>
       <p class="subContent">1.安全监控与日志分析</p>
@@ -59,12 +59,15 @@ const pageReload = () => {
   width: 100%;
   height: 300px;
   background-image: url('../../img/topBackground.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 .content{
   text-align: right;
   position: absolute;
-  color: wheat;
+  color: rgb(76, 65, 218);
   right: 300px;
   top: 120px;
   font-size: 50px;

@@ -21,8 +21,10 @@
   <div class="beforeContent">
     <div class="bigContent">
       <div class="contentTitle">合作伙伴</div>
-      <div class="partPage" v-for="item in items2">
-        <img :src="item.logo" style="width: 70%;">
+      <div class="beforePart">
+        <div class="partPage" v-for="item in items2">
+          <img :src="item.logo" style="width: 70%;">
+        </div>
       </div>
     </div>
     <el-divider></el-divider>
@@ -293,12 +295,15 @@ const pageReload = () => {
   width: 100%;
   height: 300px;
   background-image: url('../img/topBackground.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 .content{
   text-align: right;
   position: absolute;
-  color: wheat;
+  color: rgb(76, 65, 218);
   right: 300px;
   top: 120px;
   font-size: 50px;
@@ -313,8 +318,8 @@ const pageReload = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  min-width: 800px;
+  min-width: 1200px;
+  max-width: 1200px;
   height: auto;
   justify-items: center;
   padding-top: 30px;
@@ -330,6 +335,9 @@ const pageReload = () => {
   height: 70px;
   margin-right: 20px;
   margin-bottom: 20px;
+}
+.partPage:last-child{
+  margin-right: auto;
 }
 .contentTitle{
   color: black;
@@ -351,9 +359,7 @@ const pageReload = () => {
     width: 130px;
     background-color: #347bc7;
 }
-
-.el-menu > 
-.customer{
+.el-menu > .customer{
   width: 100%;
   justify-items: center;
 }
@@ -417,5 +423,12 @@ const pageReload = () => {
 }
 #header_divider{
   margin: 0;
+}
+.beforePart{
+  margin-left: 55px;
+  min-width: 1200px;
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
 }
 </style>

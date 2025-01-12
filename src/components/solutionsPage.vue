@@ -20,11 +20,12 @@
   <el-divider width="100px" id="header_divider"></el-divider>
   <div class="bigContent">
     <div class="intoContent" v-for="item in items">
-      <p>{{ item.title }}</p>
-      <p style="font-size: 15pt; padding-left: 150px; padding-right: 150px; text-indent: 2em; text-align: left;" v-html="item.content"></p>
-      <br />
-      <p style="font-size: 12pt; text-align: right; margin-right: 100px;"><a :href=item.page @click="pageReload">了解更多>></a></p>
-      <br />
+      <img :src="String(item.image)"  alt="Image" />
+      <div class="smallDiv">
+        <p style="font-size: 10pt; padding-left: 50px; padding-right: 50px; text-indent: 2em; text-align: left;" v-html="item.content"></p>
+        <a :href=item.page @click="pageReload"><div class="checkMore" style="margin-top: 10px; font-size: 10pt;">查看更多</div></a>
+        <!-- <p style="font-size: 8pt; text-align: right; margin-right: 100px;"><a :href=item.page @click="pageReload">了解更多>></a></p> -->
+      </div>
     </div>
   </div>
 </template>
@@ -33,17 +34,20 @@
 
 const items = [
   {
-    title: '信息系统集成及运维服务',
+    image: new URL('../img/solutions/1.1.jpg', import.meta.url),
+    // title: '信息系统集成及运维服务',
     content: '在信息化日新月异的时代背景下，我们公司专注于为客户提供卓越的信息系统集成及运维服务。我们拥有一支技术精湛、经验丰富的专业团队，致力于将先进的信息技术与企业实际需求相结合，为客户量身打造高效、稳定、安全的信息系统解决方案。从系统规划、设计、实施到后续运维，我们始终坚持以客户为中心，确保每一项服务都能满足客户的严苛要求，助力企业在激烈的市场竞争中脱颖而出。',
     page: '#/businessPage1'
   },
   {
-    title: '信息安全集成及运维',
+    image: new URL('../img/solutions/1.2.jpg', import.meta.url),
+    // title: '信息安全集成及运维',
     content: '公司作为专业的信息安全服务提供商，致力于为客户提供全方位的信息安全解决方案，以确保企业数据的安全与稳定。通过先进的安全集成技术和高效的运维服务，我们助力企业筑牢数据安全防线，应对不断变化的网络安全威胁。我们的服务旨在为企业保驾护航，确保其在数字化转型的道路上稳步前行。',
     page: '#/businessPage2'
   },
   {
-    title: '智能化系统集成及解决方案',
+    image: new URL('../img/solutions/1.3.jpg', import.meta.url),
+    // title: '智能化系统集成及解决方案',
     content: '从智能化系统的设计、集成到后期的运维管理，我们均能提供专业、高效的服务。通过持续的技术创新和优化，我们助力客户实现智能化转型，提升企业核心竞争力。我们的服务范围广泛，涵盖多个行业领域，满足不同客户的个性化需求。选择我们，您将获得智能化集成及运维的全面解决方案，为企业发展注入强劲动力。',
     page: '#/businessPage3'
   }
@@ -63,12 +67,15 @@ const pageReload = () => {
   width: 100%;
   height: 300px;
   background-image: url('../img/topBackground.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 .content{
   text-align: right;
   position: absolute;
-  color: wheat;
+  color: rgb(76, 65, 218);
   right: 300px;
   top: 120px;
   font-size: 50px;
@@ -89,7 +96,16 @@ const pageReload = () => {
   box-shadow: 15px 15px 15px -6px rgba(116, 116, 116, 0.5);
   font-size: 25pt;
   width: 80%;
-  min-height: 300px;
+  /* min-height: 300px; */
+  height: 200px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.intoContent img{
+  width: 550px;
+  height: 200px;
+  
 }
 .divider{
   display: flex;
@@ -119,5 +135,22 @@ const pageReload = () => {
 }
 .intoContent a:hover{
   color: rgb(6, 48, 65);
+}
+.checkMore{
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(163, 163, 163);
+  width: 100px;
+  height: 25px;
+  border: 1px solid black;
+  transition: color 0.3s, background-color 0.3s;
+}
+.checkMore:hover{
+  color: black;
+  background-color: white;
+}
+.smallDiv{
+  justify-items: center;
 }
 </style>

@@ -22,13 +22,13 @@
     <div class="text_content">
       <p>如果您对我们的公司、产品或服务感兴趣，或者有任何疑问、合作意向，欢迎随时与我们联系。</p>
       <p style="font-size: 12pt; font-weight: bold;">联系方式</p>
-      <p>公司电话:XXXXXXXXXXX</p>
-      <p>公司邮箱:XXXXX@XXX.XXX</p>
-      <p>公司地址:XXXXXXXXXXXXXXX</p>
-      <p style="font-size: 12pt; font-weight: bold;">在线咨询</p>
+      <p>公司电话:020-38469807</p>
+      <p>公司邮箱:</p>
+      <p>公司地址:广州市天河区体育西路109号高盛大厦23C07单元</p>
+      <p style="font-size: 12pt; font-weight: bold;">在线咨询(暂未开通)</p>
       <p style="padding-right: 100px;">您还可以通过我们的官方网站在线咨询功能与我们的客服人员进行实时沟通。我们的客服人员将竭诚为您解答问题，并为您提供详细的产品信息和解决方案建议。</p>
       <p style="font-size: 12pt; font-weight: bold;">社交媒体</p>
-      <p>微信公众号：[公众号名称] </p>
+      <p>微信公众号：铭诚数字化 </p>
     </div>
     <div id="container"></div>
   </div>
@@ -87,12 +87,15 @@ const pageReload = () => {
   width: 100%;
   height: 300px;
   background-image: url('../img/topBackground.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 .content{
   text-align: right;
   position: absolute;
-  color: wheat;
+  color: rgb(76, 65, 218);
   right: 300px;
   top: 120px;
   font-size: 50px;

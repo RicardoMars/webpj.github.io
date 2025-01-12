@@ -29,8 +29,8 @@
                     <el-menu-item :class="{ dropdown:true, sticky2 : flag}" index="/aboutus" disabled>
                         <span :class="{ dropbtn:true, sticky2 : flag}">关于我们</span>
                         <div class="dropdown-content">
-                            <a href="#" @click.prevent="handleSelect('/aboutus',['/aboutus'])">介绍</a>
-                            <a href="#" @click.prevent="handleSelect('/qualify',['/qualify'])">资质荣誉</a>
+                            <a href="#" @click.prevent="handleSelect('/aboutus')">介绍</a>
+                            <a href="#" @click.prevent="handleSelect('/qualify')">资质荣誉</a>
                             <!-- <a href="#" @click.prevent="handleSelect('/response',['/response'])">社会责任</a> -->
                         </div>
                     </el-menu-item>
@@ -70,8 +70,8 @@
                     </div>
                     <div class="content_place">
                         <div><span style="font-size: 15pt;">法律信息</span></div>
-                        <div style="margin-top: 10px;"><a href="#" @click="openError">服务协议</a></div>
-                        <div style="margin-top: 10px;"><a href="#" @click="openError">知识产权</a></div>
+                        <div style="margin-top: 10px;"><a href="javascript:void(0);" @click="openError">服务协议</a></div>
+                        <div style="margin-top: 10px;"><a href="javascript:void(0);" @click="openError">知识产权</a></div>
                     </div>
                 </div>
                 <el-divider style="float: left;" />
@@ -96,7 +96,7 @@ const result = ref('')
 const flag = ref(false)
 const router = useRouter()
 const activeIndex = ref('');
-var headerLogo = new URL('./img/logo2-white.png', import.meta.url).href
+var headerLogo = new URL('./img/logo2.png', import.meta.url).href
 
 /**
  * 处理菜单选择事件的函数
@@ -105,8 +105,7 @@ var headerLogo = new URL('./img/logo2-white.png', import.meta.url).href
  * @param {string[]} keyPath - 被选中的菜单项的路径
  * @returns {void} 无返回值
  */
-const handleSelect = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
+const handleSelect = (key: string) => {
   // 根据选中的菜单项执行相应的操作
   switch (key) {
     case '/':
@@ -161,11 +160,11 @@ const scrollEvent = () => {
 //   console.log('scrollTop:', dis);
   // 使用 flag 的方式要通过 ref
   flag.value = dis > 150;
-  if (dis > 150) {
-    headerLogo = new URL('./img/logo2.png', import.meta.url).href
-  } else {
-    headerLogo = new URL('./img/logo2-white.png', import.meta.url).href
-  }
+//   if (dis > 150) {
+//     headerLogo = new URL('./img/logo2.png', import.meta.url).href
+//   } else {
+//     headerLogo = new URL('./img/logo2-white.png', import.meta.url).href
+//   }
 }
 
 onBeforeMount(() => {
@@ -200,7 +199,6 @@ onBeforeMount(() => {
             activeIndex.value = '/solution'
             break
     }
-    console.log(activeIndex)
   }, 0);
 })
 
@@ -220,7 +218,7 @@ onUnmounted(() => {
  */
 const openError = () => {
   // 使用 Element Plus 的 Message 组件显示错误信息
-  ElMessage.error('噢，你点击的地方还没有开发完成呢！')
+  ElMessage.error('此按钮暂未启用')
 }
 
 interface ValType {
@@ -309,7 +307,7 @@ html{
 }
 .el-menu > .el-menu-item{
     font-size: 12pt;
-    color: white !important;
+    color: black !important;
     background-color: transparent !important;
     width: 100px;
     border-bottom: none !important;
@@ -407,7 +405,7 @@ a:hover {
     transition: opacity 0.3s ease, visibility 0s 0s;
 }
 .dropbtn {
-    color: white;
+    color: black;
     padding: 16px;
     font-size: 16px;
     border: none;

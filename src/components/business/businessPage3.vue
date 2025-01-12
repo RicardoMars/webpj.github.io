@@ -33,6 +33,7 @@
       <br />
       <p class="subTitle">四、智能交通系统集成</p>
       <p class="subContent">智能交通系统集成旨在运用先进的信息化技术，提升交通系统的智能化水平和管理效率。我们为客户提供包括智能交通监控系统、智能信号控制系统、智能停车管理系统等在内的全方位解决方案，助力城市交通的顺畅运行和智能化发展。</p>
+      <img src="../../img/solution/3.1.png" />
       <br />
       <p class="subTitle">五、智慧园区系统集成及解决方案</p>
       <p class="subContent">智慧园区系统集成服务是将物联网、大数据、云计算、人工智能等先进技术融合，为园区打造一个智能化、高效化、可持续发展的生态环境。智慧园区系统集成将园区内的各个子系统、应用和服务进行整合，如安防监控、门禁管理、智能照明、能源管理、设备监控等，实现信息共享、协同工作和智能化管理。通过统一的通信协议和接口，各子系统之间实现互联互通，形成一个完整的智能化管理体系。</p>
@@ -57,12 +58,15 @@ const pageReload = () => {
   width: 100%;
   height: 300px;
   background-image: url('../../img/topBackground.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 .content{
   text-align: right;
   position: absolute;
-  color: wheat;
+  color: rgb(76, 65, 218);
   right: 300px;
   top: 120px;
   font-size: 50px;
