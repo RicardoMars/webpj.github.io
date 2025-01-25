@@ -4,7 +4,7 @@
  * @Author: Ricardo_Mars
  * @Date: 2024-11-20 15:31:35
  * @LastEditors: Ricardo_Mars
- * @LastEditTime: 2024-11-21 17:21:49
+ * @LastEditTime: 2025-01-16 18:15:45
 -->
 <template>
   <div class="Header">
@@ -21,7 +21,7 @@
   <div class="bigContent">
       <div class="inContent" v-for="item in images" style="margin-top: 10px;">
         <div class="insideContent">
-          <img :src="item.logo">
+          <!-- <img :src="item.logo" alt="Image"> -->
           <p style="font-size: 10pt; color: black;">{{ item.title }}</p>
         </div>
       </div>
