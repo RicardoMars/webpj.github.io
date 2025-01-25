@@ -23,7 +23,7 @@
       <img :src="String(item.image)"  alt="Image" />
       <div class="smallDiv">
         <p style="font-size: 10pt; padding-left: 50px; padding-right: 50px; text-indent: 2em; text-align: left;" v-html="item.content"></p>
-        <a :href=item.page @click="pageReload"><div class="checkMore" style="margin-top: 10px; font-size: 10pt;">查看更多</div></a>
+        <a :href=item.page @click="pageReload" style="display: inline-block;"><div class="checkMore" style="margin-top: 10px; font-size: 10pt;"><span>查看更多</span></div></a>
         <!-- <p style="font-size: 8pt; text-align: right; margin-right: 100px;"><a :href=item.page @click="pageReload">了解更多>></a></p> -->
       </div>
     </div>
@@ -85,7 +85,9 @@ const pageReload = () => {
   background-color: white;
   width: 100%;
   height: auto;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding-top: 30px;
 }
 .intoContent{
@@ -138,17 +140,19 @@ const pageReload = () => {
 }
 .checkMore{
   color: rgb(0, 0, 0);
+  display: flex;
   justify-content: center;
-  align-content: center;
-  background-color: rgb(163, 163, 163);
+  align-items: center;
+  background-color: rgb(255, 255, 255);
   width: 100px;
   height: 25px;
   border: 1px solid black;
   transition: color 0.3s, background-color 0.3s;
+  border-radius: 15px;
 }
 .checkMore:hover{
   color: black;
-  background-color: white;
+  background-color: rgb(175, 175, 175);
 }
 .smallDiv{
   justify-items: center;

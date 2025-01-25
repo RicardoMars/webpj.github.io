@@ -32,7 +32,6 @@
       <div class="contentTitle">重点客户 + 产业合作伙伴</div>
       <div class="customer_in" v-for="item in images">
         <div class="left_logo">
-          <img :src="item.src" style="width: 120px;">
           <p>{{ item.title }}</p>
         </div>
         <div class="right_content">
@@ -41,7 +40,6 @@
       </div>
       <div class="customer_in" v-for="item in images2">
         <div class="left_logo">
-          <img :src="item.src" style="width: 120px;">
           <p>{{ item.title }}</p>
         </div>
         <div class="right_content">
@@ -50,7 +48,6 @@
       </div>
       <div class="customer_in" v-for="item in images3">
         <div class="left_logo">
-          <img :src="item.src" style="width: 120px;">
           <p>{{ item.title }}</p>
         </div>
         <div class="right_content">
@@ -59,7 +56,6 @@
       </div>
       <div class="customer_in" v-for="item in images4" style="height: 300px;">
         <div class="left_logo">
-          <img :src="item.src" style="width: 120px;">
           <p>{{ item.title }}</p>
         </div>
         <div class="right_content">
@@ -312,7 +308,9 @@ const pageReload = () => {
 .beforeContent{
   width: 100%;
   height: auto;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .bigContent{
   display: flex;
@@ -364,27 +362,37 @@ const pageReload = () => {
   justify-items: center;
 }
 .customer_in{
+  color: black;
   width: 1300px;
   height: 200px;
-  background-color: blue;
+  background: rgb(217, 249, 255) linear-gradient(to right, rgba(167, 221, 253, 0), rgb(255, 255, 255));
   position: relative;
-  border-top-left-radius: 20%;
-  border-bottom-left-radius: 20%;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   margin-top: 30px;
+  transition: all .5s;
+}
+.customer_in:hover{
+  color: white;
+  background-color: rgb(0, 162, 255);
+
 }
 .left_logo{
   position: absolute;
   width: 200px;
   height: 100%;
-  background-color: #2095E4;
-  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-top-left-radius: 20%;
   border-bottom-left-radius: 20%;
+  writing-mode: vertical-lr;
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
 }
 .left_logo p{
   font-size: 15pt;
-  color: white;
   line-height: 0;
+  font-weight: bold;
 }
 .right_content{
   display: flex;
@@ -392,7 +400,6 @@ const pageReload = () => {
   float: right;
   width: 1100px;
   height: 100%;
-  background-color: #eff4ff;
   flex-wrap: wrap;
 }
 .inside_content{

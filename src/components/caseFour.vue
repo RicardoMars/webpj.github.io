@@ -102,7 +102,9 @@ const pageReload = () => {
   color: black;
   width: 100%;
   height: auto;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .bigContent .place_1{
   width: 1200px;

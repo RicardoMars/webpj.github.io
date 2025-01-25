@@ -51,9 +51,17 @@
             <div class="footer_info">
                 <div class="footer_header" style="color: black; font-size: 20pt; display: flex;">
                     <span style="float: left;">关注我们</span>
-                    <img class="footer_img wechat" src="./img/icon/微信_wechat.svg" />
-                    <img class="footer_img" src="./img/icon/微博_weibo.svg" />
-                    <img class="footer_img" src="./img/icon/抖音_tiktok.svg" />
+                    <el-popover
+                        placement="top-start"
+                        :width="150"
+                        trigger="hover"
+                    >
+                        <p style="font-size:10pt;">扫码关注微信公众号</p>
+                        <img style="width: 120px; height: 120px; object-fit: cover;" src="./img/WeChatQRCode.png"/>
+                        <template #reference>
+                            <img class="footer_img wechat" src="./img/icon/微信_wechat.svg" />
+                        </template>
+                    </el-popover>
                 </div>
                 <el-divider style="float: left;" />
                 <div class="footer_content" style=" color: black; float: left; display: flex;">
@@ -61,18 +69,17 @@
                         <div><span style="font-size: 15pt;">加入我们</span></div>
                         <div style="margin-top: 10px;"><a href="#/contactus" @click="pageReload">社会招聘</a></div>
                         <div style="margin-top: 10px;"><a href="#/contactus" @click="pageReload">校园招聘</a></div>
-                        <div style="margin-top: 10px;"><a href="#/contactus" @click="pageReload">国际招聘</a></div>
                     </div>
                     <div class="content_place">
                         <div><span style="font-size: 15pt;">联系我们</span></div>
                         <div style="margin-top: 10px;"><a href="#/contactus" @click="pageReload">客户服务</a></div>
                         <div style="margin-top: 10px;"><a href="#/contactus" @click="pageReload">合作洽谈</a></div>
                     </div>
-                    <div class="content_place">
+                    <!-- <div class="content_place">
                         <div><span style="font-size: 15pt;">法律信息</span></div>
                         <div style="margin-top: 10px;"><a href="javascript:void(0);" @click="openError">服务协议</a></div>
                         <div style="margin-top: 10px;"><a href="javascript:void(0);" @click="openError">知识产权</a></div>
-                    </div>
+                    </div> -->
                 </div>
                 <el-divider style="float: left;" />
                 <div style="width: 100%; height: 50px; color: black; float: left; text-align: center;">
@@ -88,7 +95,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router'
-import { ElMessage } from 'element-plus';
+// import { ElMessage } from 'element-plus';
 import { onMounted, onBeforeMount } from 'vue';
 import { onUnmounted } from 'vue';
 const result = ref('')
@@ -216,10 +223,10 @@ onUnmounted(() => {
  * 当用户点击未开发完成的功能时，调用此函数弹出错误提示
  * @returns {void} 无返回值
  */
-const openError = () => {
-  // 使用 Element Plus 的 Message 组件显示错误信息
-  ElMessage.error('此按钮暂未启用')
-}
+// const openError = () => {
+//   // 使用 Element Plus 的 Message 组件显示错误信息
+//   ElMessage.error('此按钮暂未启用')
+// }
 
 interface ValType {
   key: string;

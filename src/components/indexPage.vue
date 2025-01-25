@@ -17,7 +17,7 @@
     <div class="bigContent">
       <div class="box1">
         <div class="show1">
-        <img src="../img/indexImg/1.1.png" alt="img1" style="object-fit: cover; width: 70%; height: 160px;" />
+        <img src="../img/indexImg/1.1.svg" alt="img1" style="object-fit: cover; width: 70%; height: 160px;" />
         <p style="margin: 0;">基础设施集成及运维</p>
         <p style="margin: 0; font-size: 10pt;">Integration and operation of infrastructure</p>
       </div>
@@ -32,7 +32,7 @@
       </div>
       <div class="box1">
         <div class="show2">
-          <img src="../img/indexImg/1.2.png" alt="img1" style="object-fit: cover; width: 70%; height: 160px;" />
+          <img src="../img/indexImg/1.2.svg" alt="img1" style="object-fit: cover; width: 70%; height: 160px;" />
           <p style="margin: 0;">信息安全集成与运维</p>
           <p style="margin: 0; font-size: 10pt;">Integration and operation of information security</p>
         </div>
@@ -47,7 +47,7 @@
       </div>
       <div class="box1">
         <div class="show3">
-          <img src="../img/indexImg/1.3.png" alt="img1" style="object-fit: cover; width: 70%; height: 160px;" />
+          <img src="../img/indexImg/1.3.svg" alt="img1" style="object-fit: cover; width: 70%; height: 160px;" />
           <p style="margin: 0;">智能化系统集成及解决方案</p>
           <p style="margin: 0; font-size: 10pt;">Intelligent system integration and solutions</p>
         </div>
@@ -66,21 +66,21 @@
   <div class="info_main">
     <div class="elrow">
       <div class="col1">
-        <div class="col_img"><a href="#/aboutus" @click="pageReload"><img src="../img/page1-introduce.png" alt="Image" style="width: 100%; height: 160px; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/aboutus" @click="pageReload"><img src="../img/page1-introduce.svg" alt="Image" style="width: 100%; height: 160px; object-fit: cover;"></a></div>
         <div class="col_text">
           <h2 style="color: black;">公司介绍</h2>
           <span style="color: black;">广州铭诚计算机科技有限公司注册成立于2007年，是一家在系统集成领域极具影响力的高科技企业。总部位于广东省广州市，凭借其卓越的创新能力、专业的团队以及对客户需求的深刻理解，在行业内树立了良好的口碑。</span>
         </div>
       </div>
       <div class="col2">
-        <div class="col_img"><a href="#/qualify" @click="pageReload"><img src="../img/page1-license.png" alt="Image" style="width: 100%; height: 160px; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/qualify" @click="pageReload"><img src="../img/page1-license.svg" alt="Image" style="width: 100%; height: 160px; object-fit: cover;"></a></div>
         <div class="col_text">
           <h2 style="color: black;">企业资质</h2>
           <span style="color: black;">通过严格的认证和审批程序，我们获得了多项资质证书，证明了我们在技术实力、质量管理和服务水平等方面的领先优势。这些资质为客户提供了更多保障，体现了我们对质量和规范的坚守。</span>
         </div>
       </div>
       <div class="col1">
-        <div class="col_img"><a href="#/qualify" @click="pageReload"><img src="../img/page1-weget.png" alt="Image" style="width: 100%; height: 160px; object-fit: cover;"></a></div>
+        <div class="col_img"><a href="#/qualify" @click="pageReload"><img src="../img/page1-weget.svg" alt="Image" style="width: 100%; height: 160px; object-fit: cover;"></a></div>
         <div class="col_text">
           <h2 style="color: black;">企业荣誉</h2>
           <span style="color: black;">通过持续创新和优质服务，我们荣获了多个行业奖项和社会认可。这些荣誉不仅是对我们实力的肯定，也激励我们不断追求卓越，为客户提供更高价值的产品和服务。</span>
@@ -93,33 +93,39 @@
     <div class="elrow2">
       <a>
         <div :class="{info2col1:true, col1diventer:showdiv}">
-          <div class="col_img2"><img src="../img/indexImg/2.1.png" alt="Image"></div>
+          <div class="col_img2">
+            <img style="position: absolute; height: 250px; z-index: 0;" src="../img/indexImg/2.1.jpg" alt="Image">
+            <h2 style="position: relative; z-index: 1; color: white;">基础设施集成以及运维服务</h2>
+          </div>
           <div class="col_text">
-            <h2 style="color: black;">基础设施集成以及运维服务</h2>
             <span style="color: black;">在信息化日新月异的时代背景下，我们公司专注于为客户提供卓越的信息系统集成及运维服务。我们拥有一支技术精湛、经验丰富的专业团队，致力于将先进的信息技术与企业实际需求相结合，为客户量身打造高效、稳定、安全的信息系统解决方案。从系统规划、设计、实施到后续运维，我们始终坚持以客户为中心，确保每一项服务都能满足客户的严苛要求，助力企业在激烈的市场竞争中脱颖而出。</span>
           </div>
         </div>
       </a>
         <div :class="{info2col2:true, col2diventer:showdiv2}">
           <a>
-            <div class="col_img2"><img src="../img/indexImg/2.2.png" alt="Image"></div>
+            <div class="col_img2">
+              <img style="position: absolute; height: 250px; z-index: 0;" src="../img/indexImg/2.2.jpg" alt="Image">
+              <h2 style="position: relative; z-index: 1; color: white;">信息安全集成与运维</h2>
+            </div>
             <div class="col_text">
-              <h2 style="color: black;">信息安全集成与运维</h2>
               <span style="color: black;">公司作为专业的信息安全服务提供商，致力于为客户提供全方位的信息安全解决方案，以确保企业数据的安全与稳定。通过先进的安全集成技术和高效的运维服务，我们助力企业筑牢数据安全防线，应对不断变化的网络安全威胁。我们的服务旨在为企业保驾护航，确保其在数字化转型的道路上稳步前行。</span>
             </div>
           </a>
         </div>
       <a>
         <div :class="{info2col1:true, col1diventer:showdiv3}">
-          <div class="col_img2"><img src="../img/indexImg/2.3.png" alt="Image"></div>
+          <div class="col_img2">
+            <img style="position: absolute; height: 250px; z-index: 0;" src="../img/indexImg/2.3.jpg" alt="Image">
+            <h2 style="position: relative; z-index: 1; color: white;">智能化系统集成及解决方案</h2>
+          </div>
           <div class="col_text">
-            <h2 style="color: black;">智能化系统集成及解决方案</h2>
             <span style="color: black;">从智能化系统的设计、集成到后期的运维管理，我们均能提供专业、高效的服务。通过持续的技术创新和优化，我们助力客户实现智能化转型，提升企业核心竞争力。我们的服务范围广泛，涵盖多个行业领域，满足不同客户的个性化需求。选择我们，您将获得智能化集成及运维的全面解决方案，为企业发展注入强劲动力。</span>
           </div>
         </div>
       </a>
     </div>
-    <a href="#/solution" @click="sonClick('/solution')"><div class="checkMore" style="margin-top: 10px;">查看更多>></div></a>
+    <a href="#/solution" @click="sonClick('/solution')" style="display: inline-block; width: auto;"><div class="checkMore" style="margin-top: 10px;"><span>查看更多>></span></div></a>
   </div>
   <!-- <div class="info_content_3">
     <div class="service-divider"></div>
@@ -338,8 +344,8 @@ const pageReload = () => {
 .col_img2 img{
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  filter:brightness(0.6)
+  object-fit: cover;
+  filter:brightness(0.5)
 }
 .col_text{
   min-height: 210px;
@@ -418,8 +424,10 @@ const pageReload = () => {
 }
 .checkMore{
   color: white;
+  display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  /* align-content: center; */
   background-color: black;
   width: 200px;
   height: 50px;

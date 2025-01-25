@@ -21,17 +21,17 @@
   <div class="bigContent">
     <div class="intoContent">
       <p style="color: black;text-align: left; font-size: 18pt; text-indent: 2rem;">在当今信息化飞速发展的时代，信息系统集成已成为企业提升效率、优化管理的重要手段。我们公司作为专业的信息系统集成服务商，致力于为客户提供全方位的硬件、软件及解决方案，以满足客户日益增长的业务需求。</p>
-      <p class="subTitle">一、硬件集成</p>
+      <p class="subTitle">硬件集成</p>
       <p class="subContent">硬件是信息系统的基础，我们拥有丰富的硬件集成经验，能够为客户提供从服务器、存储设备到网络设备等一站式硬件集成服务。我们根据客户的实际需求，精选高品质的硬件设备，通过专业的集成技术，确保硬件系统的稳定性、可靠性和高效性。我们还提供硬件设备的安装、调试、维护和升级服务，确保客户在使用过程中无后顾之忧。</p>
       <br />
-      <p class="subTitle">二、软件集成</p>
+      <p class="subTitle">软件集成</p>
       <p class="subContent">软件是信息系统的灵魂，我们深知软件集成在信息系统中的重要性。我们拥有一支专业的软件研发团队，能够为客户提供定制化的软件集成解决方案。从操作系统、数据库到各类应用软件，我们都能实现与硬件系统的完美融合，提升信息系统的整体性能。我们还注重软件系统的安全性和易用性，确保客户在享受高效服务的也能保障数据安全。</p>
       <br />
-      <p class="subTitle">三、解决方案</p>
+      <p class="subTitle">解决方案</p>
       <p class="subContent">为了满足客户多样化的业务需求，我们提供了一系列创新的信息系统集成解决方案。无论是<span style="color: red;">企业资源规划（ERP）、客户关系管理（CRM）还是办公自动化（OA）</span>，我们都能为客户提供量身定制的解决方案。我们的解决方案以业务流程为导向，通过整合企业内外的信息资源，实现数据的共享和协同，从而提高企业的决策效率和市场响应速度。</p>
       <img src="../../img/solution/baseservice.png" />
       <br />
-      <p class="subTitle">四、技术支持服务</p>
+      <p class="subTitle">技术支持服务</p>
       <p class="subContent">我司可以提供技术服务，服务范围包括：设备扩容升级、硬件故障处理、系统调优、机房巡检、机房搬迁、系统与数据库问题解决等。</p>
       <center>
       <table class="supportTable" border="1px" width="1000px">
@@ -243,8 +243,9 @@ const pageReload = () => {
 }
 .subTitle{
   color: black;
-  text-align: left;
+  text-align: center;
   font-size: 15pt;
+  font-weight: bold;
 }
 .subContent{
   color: black;
